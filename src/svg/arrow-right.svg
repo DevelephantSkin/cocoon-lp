@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10.35 15.93">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke: #7a5049;
+        stroke-miterlimit: 10;
+        stroke-width: 1.57px;
+      }
+    </style>
+  </defs>
+  <g id="Camada_1" data-name="Camada 1">
+    <polyline class="cls-1" points=".51 15.34 9.14 7.97 .51 .6"/>
+  </g>
+</svg>

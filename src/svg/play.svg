@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 71.13 71.13">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke: #d1d4d4;
+        stroke-miterlimit: 10;
+        stroke-width: .91px;
+      }
+
+      .cls-2 {
+        fill: #dbd4c6;
+        stroke-width: 0px;
+      }
+    </style>
+  </defs>
+  <g id="Camada_1" data-name="Camada 1">
+    <circle class="cls-1" cx="35.56" cy="35.56" r="35.11"/>
+    <polygon class="cls-2" points="51.55 35.56 27.18 21.49 27.18 49.64 51.55 35.56"/>
+  </g>
+</svg>
