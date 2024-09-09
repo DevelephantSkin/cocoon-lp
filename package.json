@@ -1,0 +1,33 @@
+{
+  "name": "masco-lp",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@tailwindcss/container-queries": "^0.1.1",
+    "@vimeo/player": "^2.23.0",
+    "framer-motion": "^11.2.6",
+    "hamburger-react": "^2.5.1",
+    "next": "14.2.3",
+    "next-recaptcha-v3": "^1.4.1",
+    "react": "^18",
+    "react-dom": "^18",
+    "swiper": "^11.1.3"
+  },
+  "devDependencies": {
+    "eslint": "^8",
+    "eslint-config-next": "14.2.3",
+    "next-plugin-preval": "^1.2.6",
+    "postcss": "^8",
+    "prettier": "^3.2.5",
+    "prettier-plugin-tailwindcss": "^0.5.14",
+    "sharp": "^0.33.4",
+    "tailwindcss": "^3.4.1",
+    "uuid": "^10.0.0"
+  }
+}
