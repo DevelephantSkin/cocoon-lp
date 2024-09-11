@@ -63,9 +63,8 @@ const Bg = ({ onLoad, imgLoaded }) => (
     transition={{ duration: 2 }}
     className="pointer-events-none absolute left-0 top-0 h-full w-full"
   >
-    {/* TODO: check why onLoad* events are not firing */}
     <video
-      poster="https://cocoonmilagres.com.br/img/hero-poster.webp"
+      poster="https://media.cocoonmilagres.com.br/img/hero-poster.webp"
       onLoadedData={onLoad}
       playsInline
       autoPlay
@@ -74,11 +73,11 @@ const Bg = ({ onLoad, imgLoaded }) => (
       className="h-full w-full object-cover brightness-75"
     >
       <source
-        src="https://cocoonmilagres.com.br/video/hero.webm"
+        src="https://media.cocoonmilagres.com.br/video/hero.webm"
         type="video/webm"
       />
       <source
-        src="https://cocoonmilagres.com.br/video/hero.mp4"
+        src="https://media.cocoonmilagres.com.br/video/hero.mp4"
         type="video/mp4"
       />
     </video>

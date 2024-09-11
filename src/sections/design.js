@@ -60,8 +60,21 @@ export default function Design() {
       </motion.div>
       <Heading className="lg:mt-24">Permita-se transformar.</Heading>
       <div className="mx-auto lg:max-w-[80%]">
-        <Video />
-        <p>## vídeo a ser substituído ##</p>
+        <video
+          poster="https://media.cocoonmilagres.com.br/img/permita-se-transformar.webp"
+          class="w-full"
+          controls
+          playsInline
+        >
+          <source
+            src="https://media.cocoonmilagres.com.br/video/permita-se-transformar.webm"
+            type="video/webm"
+          />
+          <source
+            src="https://media.cocoonmilagres.com.br/video/permita-se-transformar.mp4"
+            type="video/mp4"
+          />
+        </video>
       </div>
     </section>
   );
