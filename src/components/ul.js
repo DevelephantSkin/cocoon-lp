@@ -24,7 +24,7 @@ export default function Ul({ className, items }) {
             },
           }}
           className={
-            // ? "before:absolute before:-left-[0.75em] before:w-[0.4em] before:content-[url('../svg/arrow-right.svg')] lg:w-max"
+            // ? "before:absolute before:-left-[0.75em] before:w-[0.4em] before:content-[url('../../svg/arrow-right.svg')] lg:w-max"
             i === 0 ? 'lg:w-max' : 'text-sand-600'
           }
         >

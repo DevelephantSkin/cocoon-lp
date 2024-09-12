@@ -24,7 +24,7 @@ export default function Design() {
         viewport={{ once: true }}
         className="mx-auto max-w-xw grid-cols-2 items-center gap-24 lg:grid"
       >
-        <FadeTo className="order-2 grid grid-cols-2 gap-4 bg-[url('../svg/logo-milk.svg')] bg-contain bg-center bg-no-repeat pt-12 lg:pt-24">
+        <FadeTo className="order-2 grid grid-cols-2 gap-4 bg-[url('../../svg/logo-milk.svg')] bg-contain bg-center bg-no-repeat pt-12 lg:pt-24">
           <MotionTag
             tag={Image}
             src={sofa}
