@@ -1,16 +1,18 @@
+import { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 
+import { useTranslation } from '@/app/i18n';
 import TextReveal from '@/components/animations/textReveal';
 
 import downArrow from '@/svg/arrow-down.svg';
-import { useState } from 'react';
 import LineByLine from '@/components/animations/lineByLine';
 
 // TODO: orchestrate animation staggering through parent component
-export default function Cover() {
+export default async function Cover({ lng }) {
   const [imgLoaded, setImgLoaded] = useState(true);
+  const { t } = await useTranslation(lng);
 
   return (
     <motion.section

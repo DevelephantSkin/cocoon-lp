@@ -1,17 +1,22 @@
 import localFont from 'next/font/local';
 import { ReCaptchaProvider } from 'next-recaptcha-v3';
 
+import { languages } from '../i18n/settings';
 import './globals.css';
+
+export async function generateStaticParams() {
+  return languages.map(lng => ({ lng }));
+}
 
 const regulator = localFont({
   src: [
     {
-      path: '../fonts/Regulator-Thin.otf',
+      path: '../../fonts/Regulator-Thin.otf',
       weight: '100',
       style: 'normal',
     },
     {
-      path: '../fonts/Regulator-Light.woff2',
+      path: '../../fonts/Regulator-Light.woff2',
       style: 'normal',
     },
   ],
@@ -23,9 +28,9 @@ export const metadata = {
   description: 'WIP',
 };
 
-export default function RootLayout({ children }) {
+export default function RootLayout({ children, params: { lng } }) {
   return (
-    <html lang="pt-BR" id="app">
+    <html lang={lng} id="app">
       <ReCaptchaProvider reCaptchaKey="6LdGYhgqAAAAAJ5qUBZtUQPyDf7UlHryhrRmZazq">
         <body
           className={

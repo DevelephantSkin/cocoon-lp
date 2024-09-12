@@ -12,11 +12,11 @@ import Implantacao from '@/sections/implantacao';
 import Facilidades from '@/sections/facilidades';
 import Contato from '@/sections/contato';
 
-export default function Home() {
+export default function Home({ params: { lng } }) {
   return (
     <>
       <Header />
-      <Cover />
+      <Cover lng={lng} />
       <main className="relative w-full max-w-full overflow-x-hidden p-8 pt-0 text-cacao lg:mb-16 lg:px-44">
         <Milagres />
         <Diferenciais />
