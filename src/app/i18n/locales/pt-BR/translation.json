@@ -1,4 +1,13 @@
 {
+  "header": {
+    "milagres": "Milagres",
+    "features": "Diferenciais",
+    "residences": "Unidades",
+    "design": "Design",
+    "master-plan": "Implantação",
+    "amenities": "Facilidades",
+    "contact": "Contato"
+  },
   "cover": {
     "title1": "É tempo",
     "title2": "de voltar",

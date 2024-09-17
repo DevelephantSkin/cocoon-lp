@@ -1,4 +1,13 @@
 {
+  "header": {
+    "milagres": "Milagres",
+    "features": "Features",
+    "residences": "Residences",
+    "design": "Design",
+    "master-plan": "Master Plan",
+    "amenities": "Amenities",
+    "contact": "Contact"
+  },
   "cover": {
     "title1": "It's time",
     "title2": "to return",

@@ -1,18 +1,26 @@
 import Link from 'next/link';
+import { useTranslation } from '@/app/i18n/client';
 
 import TextReveal from './animations/textReveal';
 
-const SECTIONS = [
-  'Milagres',
-  'Diferenciais',
-  'Unidades',
-  'Design',
-  'Implantação',
-  'Facilidades',
-  'Contato',
-];
+export default function SectionLinks({
+  animate = false,
+  onClick,
+  className,
+  lng,
+}) {
+  const { t } = useTranslation(lng);
 
-export default function SectionLinks({ animate = false, onClick, className }) {
+  const SECTIONS = [
+    t('header.milagres'),
+    t('header.features'),
+    t('header.residences'),
+    t('header.design'),
+    t('header.master-plan'),
+    t('header.amenities'),
+    t('header.contact'),
+  ];
+
   return (
     <menu className={className}>
       {SECTIONS.map(title => (

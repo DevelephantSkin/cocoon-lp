@@ -11,7 +11,7 @@ import SectionLinks from './sectionLinks';
 
 // heavily inspired on:
 // https://www.freecodecamp.org/news/how-to-create-an-animated-hamburger-menu-in-react/
-export default function MenuMobile() {
+export default function MenuMobile({ lng }) {
   const [isOpen, setOpen] = useState(false);
 
   useEffect(() => {
@@ -35,6 +35,7 @@ export default function MenuMobile() {
             <div className="min-h-1 w-full"></div>
             <div>
               <SectionLinks
+                lng={lng}
                 onClick={() => setOpen(false)}
                 className="space-y-6 text-right text-2xl font-bold uppercase tracking-wide"
               />

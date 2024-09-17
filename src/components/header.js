@@ -18,7 +18,7 @@ const FADE_IN_PROPS = {
   transition: { delay: 2, duration: 1 },
 };
 
-export default function Header() {
+export default function Header({ lng }) {
   const [hasBg, setBg] = useState(false);
   const onScroll = useCallback(() => {
     const bgThreshold = calcBgThreshold();
@@ -44,13 +44,13 @@ export default function Header() {
       {/* TODO: dynamically import appropriate component for viewport
                 OR
                 have a single component and adjust through CSS */}
-      <Mobile hasBg={hasBg} />
-      <Desktop hasBg={hasBg} />
+      <Mobile hasBg={hasBg} lng={lng} />
+      <Desktop hasBg={hasBg} lng={lng} />
     </motion.header>
   );
 }
 
-function Mobile({ hasBg }) {
+function Mobile({ hasBg, lng }) {
   return (
     <div className="flex h-full grid-cols-[3rem_1fr_3rem] items-center justify-between px-8 py-4 lg:hidden">
       <Link href="#inicio" className="h-full">
@@ -66,12 +66,12 @@ function Mobile({ hasBg }) {
         height="18"
         className={'justify-self-center ' + (hasBg ? 'filter-cacao' : '')}
       />
-      <MenuMobile />
+      <MenuMobile lng={lng} />
     </div>
   );
 }
 
-function Desktop({ hasBg }) {
+function Desktop({ hasBg, lng }) {
   return (
     <div className="relative mx-auto hidden h-full max-w-xw grid-rows-2 px-8 py-6 lg:grid">
       <Link
@@ -115,6 +115,7 @@ function Desktop({ hasBg }) {
       <div className="mt-0.5 flex items-center justify-between">
         <nav>
           <SectionLinks
+            lng={lng}
             className={
               'flex gap-5 font-bold uppercase ' + (hasBg ? 'text-cacao' : '')
             }
