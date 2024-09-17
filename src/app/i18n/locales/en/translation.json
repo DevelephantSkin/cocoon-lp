@@ -1,5 +1,140 @@
 {
   "cover": {
-    "subtitle": "It is Cocoon time."
+    "title1": "It's time",
+    "title2": "to return",
+    "title3": "to the",
+    "title4": "cocoon.",
+    "subtitle": "It’s time for Cocoon.",
+    "button": "register now"
+  },
+  "milagres": {
+    "title1": "Disconnect",
+    "title2": "to",
+    "title3": "reconnect.",
+    "description": "With its crystal-clear waters and white sandy beaches, São Miguel dos Milagres - AL is an idyllic destination for those in search of serenity and natural beauty."
+  },
+  "praia-do-toque": {
+    "title1": "Invest and indulge",
+    "title2": "in paradise",
+    "title3": "living at",
+    "title4": "Cocoon Milagres.",
+    "description": "Praia do Toque attracts those who seek peace and immersion in nature. Its natural pools at low tide are perfect for snorkeling and observing marine life."
+  },
+  "mascon": {
+    "title": "Mascon Incorporadora and Biosphere",
+    "subtitle": "style of living"
+  },
+  "features": {
+    "accessibility-convenience": "ACCESSIBILITY AND CONVENIENCE",
+    "elevators": "ELEVATORS",
+    "bike-rack": "BIKE STORAGE",
+    "exclusive-restaurant-for-residents": "EXCLUSIVE RESTAURANT FOR RESIDENTS",
+    "leisure-well-being": "LEISURE AND WELLNESS",
+    "gym": "GYM",
+    "sand-floor": "SANDY FLOOR",
+    "daily-facilities": "EVERYDAY CONVENIENCES",
+    "omo-laundry": "OMO LAUNDRY SERVICE",
+    "mini-market": "MINI MARKET",
+    "mini-pharmacy": "MINI PHARMACY",
+    "locker": "LOCKERS",
+    "guest-reception": "GUEST RECEPTION",
+    "exclusive-comfort": "EXCLUSIVE COMFORT",
+    "submerged-lounge": "SUBMERGED LOUNGE",
+    "open-air-cinema": "OUTDOOR CINEMA",
+    "external-area": "EXTERNAL AREA",
+    "indoor-facade": "INTERIOR FACADE",
+    "pool": "SWIMMING POOL",
+    "water-lounge": "SUBMERGED LOUNGE",
+    "outdoor-bistro": "OUTDOOR BISTRO",
+    "indoor-bistro": "INDOOR BISTRO",
+    "sand-court": "BEACH TENNIS",
+    "cinema": "CINEMA",
+    "entrance": "ENTRANCE"
+  },
+  "unidades": {
+    "title": "Renew Yourself."
+  },
+  "expand-image": "EXPAND IMAGE",
+  "design": {
+    "title1": "A sanctuary",
+    "title2": "of peace and",
+    "title3": "tranquility.",
+    "description": "With views of the native tropical vegetation, the rich texture of natural materials shapes the design of our residences.",
+    "video-title": "Embrace transformation."
+  },
+  "implantacao": {
+    "title": "MASTER PLAN",
+    "area": "LEISURE AREA WITH 200M²",
+    "reception": "RECEPTION",
+    "pool": "SWIMMING POOL",
+    "exclusive-restaurant": "EXCLUSIVE RESTAURANT",
+    "beach-tennis": "BEACH TENNIS",
+    "gym": "GYM",
+    "block-1": "BLOCK 1",
+    "block-2": "BLOCK 2",
+    "block-3": "BLOCK 3",
+    "block-4": "BLOCK 4",
+    "block-5": "BLOCK 5",
+    "block-6": "BLOCK 6",
+    "block-7": "BLOCK 7",
+    "block-8": "BLOCK 8",
+    "stairs": "STAIRS",
+    "elevators": "ELEVATORS",
+    "outdoor-cinema": "OUTDOOR CINEMA",
+    "bike-rack": "BIKE STORAGE",
+    "dressing-rooms": "CHANGING ROOMS",
+    "laundry": "LAUNDRY",
+    "sea": "OCEAN"
+  },
+  "facilidades": {
+    "title": "Where the soul’s transformation meets its sanctuary.",
+    "unique": "Unique location",
+    "entertainment": "Outdoor entertainment",
+    "wellness": "Wellness and health",
+    "nature": "Integration with nature",
+    "ventilation": "Natural ventilation and shading"
+  },
+  "housi": {
+    "subtitle1": "Smart living",
+    "subtitle2": "connected to services,",
+    "subtitle3": "offering greater",
+    "subtitle4": "convenience in",
+    "subtitle5": "your investment.",
+    "description": "HOUSI manages individual rentals, ensuring a seamless and effective experience for everyone involved. Additionally, it leverages technology to simplify and modernize the rental process, providing an online platform where property owners can list their rentals, and tenants can find and rent properties quickly and effortlessly.",
+    "buildings": "500 buildings",
+    "cities": "120 cities",
+    "brands": "100 brands on AppSpace",
+    "partners": "300 partner developers."
+  },
+  "services": {
+    "title": "Services offered by",
+    "living-room": "Delivery of furnished property",
+    "keys": "Lease management",
+    "bed": "Complete layette",
+    "vending-machine": "Innovative facilities",
+    "washers": "Exclusive services",
+    "maid": "Hotel services",
+    "phone": "Exclusive app for condominium owners"
+  },
+  "contato": {
+    "title": "Register Now",
+    "subtitle1": "Become an",
+    "subtitle2": "investor and",
+    "subtitle3": "secure your",
+    "subtitle4": "piece of",
+    "subtitle5": "paradise.",
+    "description": "Imagine being part of a project that redefines the standards of luxury. Discover Cocoon, an architectural masterpiece in São Miguel dos Milagres, Alagoas, where nature meets the elegance of modern living.",
+    "success": "We have received your registration! We will contact you shortly with more information.",
+    "error": "There was an error registering your account. Please try again or contact us at",
+    "button": "register now",
+    "name": "First Name",
+    "last-name": "Last Name",
+    "email": "Email",
+    "phone": "Phone",
+    "know-us": "How did you hear about us?"
+  },
+  "footer": {
+    "rights": "©2024 - Cocoon Milagres. All rights reserved.",
+    "images-alert": "Images are for illustrative purposes only. The specifications in the purchase contract’s descriptive memorandum shall prevail."
   }
 }

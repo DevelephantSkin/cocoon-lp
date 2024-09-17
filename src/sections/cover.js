@@ -3,16 +3,16 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 
-import { useTranslation } from '@/app/i18n';
+import { useTranslation } from '@/app/i18n/client';
 import TextReveal from '@/components/animations/textReveal';
 
 import downArrow from '@/svg/arrow-down.svg';
 import LineByLine from '@/components/animations/lineByLine';
 
 // TODO: orchestrate animation staggering through parent component
-export default async function Cover({ lng }) {
+export default function Cover({ lng }) {
   const [imgLoaded, setImgLoaded] = useState(true);
-  const { t } = await useTranslation(lng);
+  const { t } = useTranslation(lng);
 
   return (
     <motion.section
@@ -28,12 +28,17 @@ export default async function Cover({ lng }) {
           <div className="center-y space-y-6">
             <LineByLine
               tag="h1"
-              lines={['É tempo', 'de voltar', 'ao', 'casulo.']}
+              lines={[
+                t('cover.title1'),
+                t('cover.title2'),
+                t('cover.title3'),
+                t('cover.title4'),
+              ]}
               delay={0.75}
               className="text-4xl uppercase"
             />
             <TextReveal delay={1.75} className="uppercase">
-              É tempo de Cocoon.
+              {t('cover.subtitle')}
             </TextReveal>
             <motion.a
               href="#contato"
@@ -42,7 +47,7 @@ export default async function Cover({ lng }) {
               transition={{ delay: 2.5, duration: 0.5, ease: 'backOut' }}
               className="block w-full border py-4 text-center text-lg font-bold transition-colors duration-300 hover:bg-white hover:text-[#2D6861]"
             >
-              registre-se
+              {t('cover.button')}
             </motion.a>
           </div>
           <Link href="#milagres">

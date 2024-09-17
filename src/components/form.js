@@ -1,18 +1,33 @@
 import { useState } from 'react';
 import { useReCaptcha } from 'next-recaptcha-v3';
 import { motion } from 'framer-motion';
+import { useTranslation } from '@/app/i18n/client';
 
 import useMatchScreen from '@/lib/useMatchScreen';
 
 import TextReveal from './animations/textReveal';
 
-export default function Form() {
+export default function Form({ lng }) {
+  const { t } = useTranslation(lng);
   const url = process.env.NEXT_PUBLIC_REGISTER_BACKEND_URL;
 
   const [submitted, setSubmitted] = useState();
   const [submitting, setSubmitting] = useState(false);
   const { executeRecaptcha } = useReCaptcha();
   const isDesktop = useMatchScreen('lg');
+
+  const FIELDS = [
+    { label: t('contato.name'), type: 'text', name: 'firstName' },
+    { label: t('contato.last-name'), type: 'text', name: 'lastName' },
+    { label: t('contato.email'), type: 'email', name: 'email' },
+    { label: t('contato.phone'), type: 'tel', name: 'phone' },
+    {
+      label: t('contato.know-us'),
+      type: 'text',
+      name: 'referral',
+      optional: true,
+    },
+  ];
 
   const onSubmit = async e => {
     e.preventDefault();
@@ -46,10 +61,7 @@ export default function Form() {
   };
 
   return submitted ? (
-    <p className="cell-b mt-8 self-center text-lg">
-      Recebemos seu cadastro! Em breve entraremos em contato com mais
-      informações.
-    </p>
+    <p className="cell-b mt-8 self-center text-lg">{t('contato.success')}</p>
   ) : (
     <motion.form
       action={url}
@@ -91,8 +103,7 @@ export default function Form() {
       ))}
       {submitted === false && (
         <p className="text-lg">
-          Ocorreu um erro ao registrar seu cadastro. Por favor tente novamente
-          ou entre em contato pelo número{' '}
+          {t('contato.error')}{' '}
           <a
             href="https://api.whatsapp.com/send?phone=554888759299"
             className="underline"
@@ -113,24 +124,11 @@ export default function Form() {
         }}
         className="mt-16 block w-48 border border-cacao p-2 text-center font-bold outline-none transition-colors duration-300 hover:bg-cacao hover:text-sand focus:bg-cacao focus:text-sand disabled:bg-gray-300"
       >
-        registre-se
+        {t('contato.button')}
       </motion.button>
     </motion.form>
   );
 }
-
-const FIELDS = [
-  { label: 'Nome', type: 'text', name: 'firstName' },
-  { label: 'Sobrenome', type: 'text', name: 'lastName' },
-  { label: 'E-mail', type: 'email', name: 'email' },
-  { label: 'Telefone', type: 'tel', name: 'phone' },
-  {
-    label: 'Como você ouviu falar de nós?',
-    type: 'text',
-    name: 'referral',
-    optional: true,
-  },
-];
 
 const parseForm = form => {
   const data = new FormData(form);

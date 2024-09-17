@@ -1,7 +1,7 @@
 'use client';
 
 import Header from '@/components/header';
-import Footer from '@/components/footer';
+import Footer from '@/sections/footer';
 
 import Cover from '@/sections/cover';
 import Milagres from '@/sections/milagres';
@@ -15,18 +15,18 @@ import Contato from '@/sections/contato';
 export default function Home({ params: { lng } }) {
   return (
     <>
-      <Header />
+      <Header lng={lng} />
       <Cover lng={lng} />
       <main className="relative w-full max-w-full overflow-x-hidden p-8 pt-0 text-cacao lg:mb-16 lg:px-44">
-        <Milagres />
-        <Diferenciais />
-        <Unidades />
-        <Design />
-        <Implantacao />
-        <Facilidades />
-        <Contato />
+        <Milagres lng={lng} />
+        <Diferenciais lng={lng} />
+        <Unidades lng={lng} />
+        <Design lng={lng} />
+        <Implantacao lng={lng} />
+        <Facilidades lng={lng} />
+        <Contato lng={lng} />
       </main>
-      <Footer />
+      <Footer t={lng} />
     </>
   );
 }

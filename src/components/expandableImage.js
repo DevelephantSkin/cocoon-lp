@@ -17,7 +17,7 @@ function expandImage(imgRef) {
     img.msRequestFullscreen?.();
 }
 
-export default function ExpandableImage({ src, alt, title }) {
+export default function ExpandableImage({ src, alt, title, t }) {
   const imgRef = useRef();
 
   return (
@@ -44,7 +44,7 @@ export default function ExpandableImage({ src, alt, title }) {
           transition={{ delay: 1, duration: 1 }}
           viewport={{ once: true }}
         >
-          ABRIR IMAGEM
+          {t('expand-image')}
           <Image src={expandIcon} alt="" className="ml-1 inline" />
         </motion.button>
       </div>

@@ -16,7 +16,7 @@ import livingRoom3 from '@/img/units/3-living-room.jpg';
 import livingRoom4 from '@/img/units/4-living-room.jpg';
 import porch5 from '@/img/units/5-porch.jpg';
 
-export default function UnitSlider() {
+export default function UnitSlider({ t }) {
   return (
     <Swiper
       modules={[Navigation, EffectFade]}
@@ -34,7 +34,7 @@ export default function UnitSlider() {
       <SlideNav direction="prev" animateX />
       {SLIDES.map(slide => (
         <SwiperSlide key={slide.src.src} className="overflow-hidden">
-          <ExpandableImage {...slide} />
+          <ExpandableImage t={t} {...slide} />
         </SwiperSlide>
       ))}
       <SlideNav direction="next" animateX />

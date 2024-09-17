@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 
 import MotionTag from './animations/motionTag';
 import TextReveal from './animations/textReveal';
+import { useTranslation } from '@/app/i18n/client';
 
 import bed from '@/img/services/bed.jpg';
 import keys from '@/img/services/keys.jpg';
@@ -38,7 +39,9 @@ function service(image, title) {
   );
 }
 
-export default function CondoServices() {
+export default function CondoServices({ lng }) {
+  const { t } = useTranslation(lng);
+
   return (
     <motion.div
       variants={{ init: {}, anim: { transition: { staggerChildren: 0.2 } } }}
@@ -47,13 +50,13 @@ export default function CondoServices() {
       viewport={{ once: true }}
       className="mx-auto mt-6 flex max-w-screen-fhd grid-cols-7 flex-wrap justify-evenly gap-4 lg:grid"
     >
-      {service(livingRoom, 'Entrega do imóvel mobiliado')}
-      {service(keys, 'Administração das locações')}
-      {service(bed, 'Enxoval completo')}
-      {service(vendingMachine, 'Facilidades inovadoras')}
-      {service(washers, 'Serviços exclusivos')}
-      {service(maid, 'Serviços de hotel')}
-      {service(phone, 'Aplicativo exclusivo aos condôminos')}
+      {service(livingRoom, t('services.living-room'))}
+      {service(keys, t('services.keys'))}
+      {service(bed, t('services.bed'))}
+      {service(vendingMachine, t('services.vending-machine'))}
+      {service(washers, t('services.washers'))}
+      {service(maid, t('services.maid'))}
+      {service(phone, t('services.phone'))}
     </motion.div>
   );
 }

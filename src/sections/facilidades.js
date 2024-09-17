@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 
 import Heading from '@/components/heading';
 import CondoServices from '@/components/condoServices';
+import { useTranslation } from '@/app/i18n/client';
 
 import sideView from '@/img/side-view.jpg';
 // import aerialView from '@/img/aerial-view.jpg';
@@ -13,7 +14,9 @@ import OverlappingImages from '@/components/overlappingImages';
 import LineByLine from '@/components/animations/lineByLine';
 import FadeTo from '@/components/animations/fadeTo';
 
-export default function Facilidades() {
+export default function Facilidades({ lng }) {
+  const { t } = useTranslation(lng);
+
   return (
     <section
       id="facilidades"
@@ -21,7 +24,7 @@ export default function Facilidades() {
     >
       <div className="relative z-10 bg-sand pb-8 pt-16 lg:pb-20 lg:pt-28">
         <Heading className="!my-0 mx-auto max-w-lg">
-          Onde a metamorfose da alma encontra o refúgio.
+          {t('facilidades.title')}
         </Heading>
       </div>
       <div className="grid-facilidades grid-cols-2 gap-8 gap-x-24 lg:grid ">
@@ -46,16 +49,18 @@ export default function Facilidades() {
           viewport={{ once: true }}
           className="cell-a1 mt-8 max-w-80 space-y-8 overflow-hidden text-lg leading-6 text-cacao lg:mt-0 lg:place-self-center lg:text-xl lg:leading-10"
         >
-          <motion.li variants={LI_VARIANTS}>LOCALIZAÇÃO ÚNICA</motion.li>
+          <motion.li variants={LI_VARIANTS}>{t('facilidades.title')}</motion.li>
           <motion.li variants={LI_VARIANTS}>
-            ENTRETENIMENTO AO AR LIVRE
-          </motion.li>
-          <motion.li variants={LI_VARIANTS}>BEM-ESTAR E SAÚDE</motion.li>
-          <motion.li variants={LI_VARIANTS}>
-            INTEGRAÇÃO COM A NATUREZA
+            {t('facilidades.entertainment')}
           </motion.li>
           <motion.li variants={LI_VARIANTS}>
-            VENTILAÇÃO NATURAL E SOMBREAMENTO
+            {t('facilidades.wellness')}
+          </motion.li>
+          <motion.li variants={LI_VARIANTS}>
+            {t('facilidades.nature')}
+          </motion.li>
+          <motion.li variants={LI_VARIANTS}>
+            {t('facilidades.ventilation')}
           </motion.li>
         </motion.ul>
         <div className="cell-a2 mt-16 flex-col justify-between lg:mt-0 lg:flex">
@@ -71,40 +76,33 @@ export default function Facilidades() {
           <LineByLine
             tag="h3"
             lines={[
-              'Moradia inteligente',
-              'conectada a serviços',
-              'para você ganhar',
-              'mais praticidade em',
-              'seu investimento.',
+              t('housi.subtitle1'),
+              t('housi.subtitle2'),
+              t('housi.subtitle3'),
+              t('housi.subtitle4'),
+              t('housi.subtitle5'),
             ]}
             className="mt-6 text-xl uppercase lg:mt-0 lg:text-5xl"
           ></LineByLine>
         </div>
         <div className="cell-b2 mt-12 lg:mt-0">
-          <FadeTo className="text-wrap">
-            A HOUSI cuida das locações individuais, assegurando uma experiência
-            completa e eficaz para todos os envolvidos. Além disso, utiliza
-            tecnologia para simplificar e modernizar o processo de locação,
-            oferecendo uma plataforma online onde os proprietários podem
-            anunciar seus imóveis para locação e os inquilinos podem encontrar e
-            alugar imóveis de forma rápida e descomplicada.
-          </FadeTo>
+          <FadeTo className="text-wrap">{t('housi.description')}</FadeTo>
           <FadeTo
             tag="ul"
             direction="bottom right"
             className="mx-auto mt-8 w-fit space-y-4 text-lg *:before:font-bold *:before:content-['+_'] lg:ml-0 lg:mt-12"
           >
-            <li>de 500 prédios,</li>
-            <li>de 120 cidades,</li>
-            <li>de 100 marcas no AppSpace,</li>
-            <li>de 300 incorporadores parceiros.</li>
+            <li>{t('housi.buildings')},</li>
+            <li>{t('housi.cities')},</li>
+            <li>{t('housi.brands')},</li>
+            <li>{t('housi.partners')}</li>
           </FadeTo>
         </div>
       </div>
       <h3 className="mt-12 text-center text-xl lg:mt-24">
-        Serviços oferecidos pela <strong>HOUSI</strong>
+        {t('services.title')} <strong>HOUSI</strong>
       </h3>
-      <CondoServices />
+      <CondoServices lng={lng} />
     </section>
   );
 }

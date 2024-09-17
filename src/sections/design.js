@@ -1,17 +1,19 @@
 import Image from 'next/image';
 import { motion } from 'framer-motion';
+import { useTranslation } from '@/app/i18n/client';
 
 import Heading from '@/components/heading';
 import Article from '@/components/article';
 import FadeTo from '@/components/animations/fadeTo';
 import MotionTag from '@/components/animations/motionTag';
-import Video from '@/components/video';
 
 import sofa from '@/img/sofa.png';
 import trees from '@/img/trees.png';
 import chair from '@/img/chair.png';
 
-export default function Design() {
+export default function Design({ lng }) {
+  const { t } = useTranslation(lng);
+
   return (
     <section id="design" className="mt-4 lg:mt-24">
       <motion.div
@@ -52,17 +54,20 @@ export default function Design() {
         </FadeTo>
         <Article
           title="Design"
-          subtitle={['Um santuário', 'de paz e', 'tranquilidade.']}
+          subtitle={[
+            t('design.title1'),
+            t('design.title2'),
+            t('design.title3'),
+          ]}
         >
-          Com vista para a vegetação tropical nativa, a profunda ressonância das
-          texturas naturais inspira o design das nossas unidades.
+          {t('design.description')}
         </Article>
       </motion.div>
-      <Heading className="lg:mt-24">Permita-se transformar.</Heading>
+      <Heading className="lg:mt-24">{t('design.video-title')}</Heading>
       <div className="mx-auto lg:max-w-[80%]">
         <video
           poster="https://media.cocoonmilagres.com.br/img/permita-se-transformar.webp"
-          class="w-full"
+          className="w-full"
           controls
           playsInline
         >

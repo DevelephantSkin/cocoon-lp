@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import { motion } from 'framer-motion';
+import { useTranslation } from '@/app/i18n/client';
 
 import Heading from '@/components/heading';
 import MotionTag from '@/components/animations/motionTag';
@@ -7,13 +8,38 @@ import TextReveal from '@/components/animations/textReveal';
 
 import map from '@/img/map.png';
 
-export default function Implantacao() {
+export default function Implantacao({ lng }) {
+  const { t } = useTranslation(lng);
+
+  const AREAS = [
+    t('implantacao.reception'),
+    t('implantacao.pool'),
+    t('implantacao.exclusive-restaurant'),
+    t('implantacao.beach-tennis'),
+    t('implantacao.gym'),
+    t('implantacao.block-1'),
+    t('implantacao.block-2'),
+    t('implantacao.block-3'),
+    t('implantacao.block-4'),
+    t('implantacao.block-5'),
+    t('implantacao.block-6'),
+    t('implantacao.block-7'),
+    t('implantacao.block-8'),
+    t('implantacao.stairs'),
+    t('implantacao.elevators'),
+    t('implantacao.outdoor-cinema'),
+    t('implantacao.bike-rack'),
+    t('implantacao.dressing-rooms'),
+    t('implantacao.laundry'),
+    t('implantacao.sea'),
+  ];
+
   return (
     <section
       id="implantacao"
       className="grid-implantacao relative z-10 mx-auto mt-12 place-items-start gap-x-24 bg-sand lg:ml-24 lg:mt-40 lg:grid lg:max-w-[80%]"
     >
-      <Heading className="cell-b1 !mt-0">Implantação</Heading>
+      <Heading className="cell-b1 !mt-0">{t('implantacao.title')}</Heading>
       <div className="cell-a ml-auto overflow-hidden rounded-[2rem]">
         <MotionTag
           tag={Image}
@@ -67,35 +93,12 @@ export default function Implantacao() {
           className="mt-4 border-t-hpx border-cacao"
         />
         <TextReveal delay={1.5} className="mt-4 w-fit text-[1.5rem] leading-4">
-          ÁREA DE LAZER COM 200M²
+          {t('implantacao.area')}
         </TextReveal>
       </div>
     </section>
   );
 }
-
-const AREAS = [
-  'Recepção',
-  'Piscina',
-  'Restaurante Exclusivo',
-  'Beach Tennis',
-  'Academia',
-  'Bloco 1',
-  'Bloco 2',
-  'Bloco 3',
-  'Bloco 4',
-  'Bloco 5',
-  'Bloco 6',
-  'Bloco 7',
-  'Bloco 8',
-  'Escadas',
-  'Elevadores',
-  'Cinema ao ar livre',
-  'Bicicletário',
-  'Vestiários',
-  'Lavanderia',
-  'Mar',
-];
 
 const LI_CLASSES = [
   'relative',

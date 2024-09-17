@@ -11,31 +11,8 @@ import 'swiper/css';
 import 'swiper/css/effect-fade';
 
 import shadySand from '@/img/shady-sand.png';
-import cinema from '@/img/features/cinema.jpg';
-import entrance from '@/img/features/entrance.jpg';
-import externalArea from '@/img/features/external-area.jpg';
-import gym from '@/img/features/gym.jpg';
-import indoorBistro from '@/img/features/indoor-bistro.jpg';
-import indoorFacade from '@/img/features/indoor-facade.jpg';
-import outdoorBistro from '@/img/features/outdoor-bistro.jpg';
-import pool from '@/img/features/pool.jpg';
-import sandCourt from '@/img/features/sand-court.jpg';
-import waterLounge from '@/img/features/water-lounge.jpg';
 
-const FEATURES = [
-  { name: 'Área Externa', img: externalArea },
-  { name: 'Fachada Interna', img: indoorFacade },
-  { name: 'Piscina', img: pool },
-  { name: 'Lounge Submerso', img: waterLounge },
-  { name: 'Bistro Externo', img: outdoorBistro },
-  { name: 'Bistro Interno', img: indoorBistro },
-  { name: 'Academia', img: gym },
-  { name: 'Beach Tennis', img: sandCourt },
-  { name: 'Cinema', img: cinema },
-  { name: 'Portaria', img: entrance },
-];
-
-export default function IndexedCarousel() {
+export default function IndexedCarousel({ features }) {
   const [swiper, setSwiper] = useState(null);
   const [currentSlide, setSlide] = useState(0);
 
@@ -84,7 +61,7 @@ export default function IndexedCarousel() {
             className="overflow-visible @container"
           >
             <SlideNav direction="prev" className="hidden @[80vw]:block" />
-            {FEATURES.map(({ name, img }) => (
+            {features.map(({ name, img }) => (
               <SwiperSlide
                 className="self-center"
                 key={'feature-slide-' + name}
@@ -116,7 +93,7 @@ export default function IndexedCarousel() {
         viewport={{ once: true }}
         className="relative w-fit space-y-2 text-lg lg:space-y-4 lg:text-xl"
       >
-        {FEATURES.map(({ name }, i) => {
+        {features.map(({ name }, i) => {
           let classes =
             'cursor-pointer uppercase before:absolute before:-left-[0.75em] before:w-[0.4em] ';
           classes +=
