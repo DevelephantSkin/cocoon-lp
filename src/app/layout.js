@@ -1,7 +1,7 @@
 import localFont from 'next/font/local';
 import { ReCaptchaProvider } from 'next-recaptcha-v3';
 
-import { languages } from '../i18n/settings';
+import { languages } from './i18n/settings';
 import './globals.css';
 
 export async function generateStaticParams() {
@@ -11,12 +11,12 @@ export async function generateStaticParams() {
 const regulator = localFont({
   src: [
     {
-      path: '../../fonts/Regulator-Thin.otf',
+      path: '../fonts/Regulator-Thin.otf',
       weight: '100',
       style: 'normal',
     },
     {
-      path: '../../fonts/Regulator-Light.woff2',
+      path: '../fonts/Regulator-Light.woff2',
       style: 'normal',
     },
   ],

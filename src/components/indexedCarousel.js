@@ -98,7 +98,7 @@ export default function IndexedCarousel({ features }) {
             'cursor-pointer uppercase before:absolute before:-left-[0.75em] before:w-[0.4em] ';
           classes +=
             i == currentSlide
-              ? "before:content-[url('../../svg/arrow-right.svg')]"
+              ? "before:content-[url('../svg/arrow-right.svg')]"
               : 'text-sand-600';
           return (
             <motion.li
