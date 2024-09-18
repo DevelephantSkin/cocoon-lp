@@ -1,14 +1,149 @@
 {
-  "slide_1_title_line_1": "É tempo",
-  "slide_1_title_line_2": "de voltar",
-  "slide_1_title_line_3": "ao",
-  "slide_1_title_line_4": "casulo",
-  "slide_1_description": "É tempo de Cocoon.",
-
-  "slide_2_title_line_1": "Desconectar",
-  "slide_2_title_line_2": "para",
-  "slide_2_title_line_3": "reconectar",
-  "slide_2_description": "Com suas praias de águas cristalinas e areias brancas, São Miguel dos Milagres - AL é um destino turístico perfeito para quem busca tranquilidade e beleza natural.",
-
-  "register": "registre-se"
+  "header": {
+    "milagres": "Milagres",
+    "features": "Diferenciais",
+    "residences": "Unidades",
+    "design": "Design",
+    "master-plan": "Implantação",
+    "amenities": "Facilidades",
+    "contact": "Contato"
+  },
+  "cover": {
+    "title1": "É tempo",
+    "title2": "de voltar",
+    "title3": "ao",
+    "title4": "casulo.",
+    "subtitle": "É tempo de Cocoon.",
+    "button": "registre-se"
+  },
+  "milagres": {
+    "title1": "Desconectar",
+    "title2": "para",
+    "title3": "reconectar.",
+    "description": "Com suas praias de águas cristalinas e areias brancas, São Miguel dos Milagres - AL é um destino turístico perfeito para quem busca tranquilidade e beleza natural."
+  },
+  "praia-do-toque": {
+    "title1": "Invista e desfrute",
+    "title2": "de moradias",
+    "title3": "paradisíacas em",
+    "title4": "Cocoon Milagres.",
+    "description": "A Praia do Toque é procurada por quem deseja tranquilidade e contato com a natureza. Suas piscinas naturais na maré baixa são ótimas para mergulho e observação da vida marinha."
+  },
+  "mascon": {
+    "title": "Mascon Incorporadora e Biosphere",
+    "subtitle": "estilo de morar"
+  },
+  "features": {
+    "accessibility-convenience": "ACESSIBILIDADE E CONVENIÊNCIA",
+    "elevators": "ELEVADORES",
+    "bike-rack": "BICICLETÁRIO",
+    "exclusive-restaurant-for-residents": "RESTAURANTE EXCLUSIVO AOS CONDÔMINOS",
+    "leisure-well-being": "LAZER E BEM-ESTAR",
+    "gym": "ACADEMIA",
+    "sand-floor": "CHÃO DE AREIA",
+    "daily-facilities": "FACILIDADES DO DIA A DIA",
+    "omo-laundry": "LAVANDERIA OMO",
+    "mini-market": "MINI MERCADO",
+    "mini-pharmacy": "MINI FARMÁCIA",
+    "locker": "LOCKER",
+    "guest-reception": "RECEPÇÃO AOS HÓSPEDES",
+    "exclusive-comfort": "CONFORTO EXCLUSIVO",
+    "submerged-lounge": "LOUNGE SUBMERSO",
+    "open-air-cinema": "CINEMA AO AR LIVRE",
+    "external-area": "ÁREA EXTERNA",
+    "indoor-facade": "FACHADA INTERNA",
+    "pool": "PISCINA",
+    "water-lounge": "LOUNGE SUBMERSO",
+    "outdoor-bistro": "BISTRO EXTERNO",
+    "indoor-bistro": "BISTRO INTERNO",
+    "sand-court": "BEACH TENNIS",
+    "cinema": "CINEMA",
+    "entrance": "PORTARIA"
+  },
+  "unidades": {
+    "title": "Renove-se"
+  },
+  "expand-image": "ABRIR IMAGEM",
+  "design": {
+    "title1": "Um santuário",
+    "title2": "de paz e",
+    "title3": "tranquilidade.",
+    "description": "Com vista para a vegetação tropical nativa, a profunda ressonância das texturas naturais inspira o design das nossas unidades.",
+    "video-title": "Permita-se transformar."
+  },
+  "implantacao": {
+    "title": "IMPLANTAÇÃO",
+    "area": "ÁREA DE LAZER COM 200M²",
+    "reception": "RECEPÇÃO",
+    "pool": "PISCINA",
+    "exclusive-restaurant": "RESTAURANTE EXCLUSIVO",
+    "beach-tennis": "BEACH TENNIS",
+    "gym": "ACADEMIA",
+    "block-1": "BLOCO 1",
+    "block-2": "BLOCO 2",
+    "block-3": "BLOCO 3",
+    "block-4": "BLOCO 4",
+    "block-5": "BLOCO 5",
+    "block-6": "BLOCO 6",
+    "block-7": "BLOCO 7",
+    "block-8": "BLOCO 8",
+    "stairs": "ESCADAS",
+    "elevators": "ELEVADORES",
+    "outdoor-cinema": "CINEMA AO AR LIVRE",
+    "bike-rack": "BICICLETÁRIO",
+    "dressing-rooms": "VESTIÁRIOS",
+    "laundry": "LAVANDERIA",
+    "sea": "MAR"
+  },
+  "facilidades": {
+    "title": "Onde a metamorfose da alma encontra o refúgio.",
+    "unique": "LOCALIZAÇÃO ÚNICA",
+    "entertainment": "ENTRETENIMENTO AO AR LIVRE",
+    "wellness": "BEM-ESTAR E SAÚDE",
+    "nature": "INTEGRAÇÃO COM A NATUREZA",
+    "ventilation": "VENTILAÇÃO NATURAL E SOMBREAMENTO"
+  },
+  "housi": {
+    "subtitle1": "Moradia inteligente",
+    "subtitle2": "conectada a serviços",
+    "subtitle3": "para você ganhar",
+    "subtitle4": "mais praticidade em",
+    "subtitle5": "seu investimento.",
+    "description": "A HOUSI cuida das locações individuais, assegurando uma experiência completa e eficaz para todos os envolvidos. Além disso, utiliza tecnologia para simplificar e modernizar o processo de locação, oferecendo uma plataforma online onde os proprietários podem anunciar seus imóveis para locação e os inquilinos podem encontrar e alugar imóveis de forma rápida e descomplicada.",
+    "buildings": "de 500 prédios",
+    "cities": "de 120 cidades",
+    "brands": "de 100 marcas no AppSpace",
+    "partners": "de 300 incorporadores parceiros."
+  },
+  "services": {
+    "title": "Serviços oferecidos pela",
+    "living-room": "Entrega do imóvel mobiliado",
+    "keys": "Administração das locações",
+    "bed": "Enxoval completo",
+    "vending-machine": "Facilidades inovadoras",
+    "washers": "Serviços exclusivos",
+    "maid": "Serviços de hotel",
+    "phone": "Aplicativo exclusivo aos condôminos"
+  },
+  "contato": {
+    "title": "Registre-se",
+    "subtitle1": "Torne-se um",
+    "subtitle2": "investidor e",
+    "subtitle3": "garanta seu",
+    "subtitle4": "pedaço de",
+    "subtitle5": "paraíso.",
+    "description": "Você já imaginou fazer parte de um projeto que redefine os padrões de luxo? Conheça o Cocoon, uma obra-prima arquitetônica em São Miguel dos Milagres, Alagoas, onde a natureza se encontra com o requinte da vida moderna.",
+    "success": "Recebemos seu cadastro! Em breve entraremos em contato com mais informações.",
+    "error": "Ocorreu um erro ao registrar seu cadastro. Por favor tente novamente ou entre em contato pelo número",
+    "button": "registre-se",
+    "name": "Nome",
+    "last-name": "Sobrenome",
+    "email": "E-mail",
+    "phone": "Telefone",
+    "know-us": "Como você ouviu falar de nós?"
+  },
+  "footer": {
+    "rights": "©2024 - Cocoon Milagres. Todos os direitos reservados.",
+    "images-alert": "Imagens meramente ilustrativas. Prevalecem as especificações do memorial descritivo constante no contrato de compra e venda do imóvel."
+  }
 }
