@@ -21,7 +21,7 @@ export default function Facilidades() {
     >
       <div className="relative z-10 bg-sand pb-8 pt-16 lg:pb-20 lg:pt-28">
         <Heading className="!my-0 mx-auto max-w-lg">
-          Onde a metamorfose da alma encontra o refúgio
+          Onde a metamorfose da alma encontra o refúgio.
         </Heading>
       </div>
       <div className="grid-facilidades grid-cols-2 gap-8 gap-x-24 lg:grid ">
