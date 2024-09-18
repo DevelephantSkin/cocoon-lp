@@ -1,4 +1,4 @@
-import React, { createContext, useState, useContext } from 'react';
+import React, { createContext, useState, useContext, useEffect } from 'react';
 import pt from '../locales/pt-br.json';
 import en from '../locales/en.json';
 
@@ -6,6 +6,11 @@ const LanguageContext = createContext();
 
 export const LanguageProvider = ({ children }) => {
   const [language, setLanguage] = useState('en');
+
+  useEffect(() => {
+    const browserLanguage = navigator.language.startsWith('pt') ? 'pt' : 'en';
+    setLanguage(browserLanguage);
+  }, []);
 
   const translations = language === 'pt' ? pt : en;
 
