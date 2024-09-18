@@ -46,6 +46,7 @@ export default function Cover() {
               {translations.cover.subtitle}
             </TextReveal>
             <motion.a
+              key={translations.cover.button}
               href="#contato"
               initial={{ scale: 0 }}
               animate={{ scale: 1 }}

@@ -1,20 +1,22 @@
 import Link from 'next/link';
 
 import TextReveal from './animations/textReveal';
-
-const SECTIONS = [
-  'Milagres',
-  'Diferenciais',
-  'Unidades',
-  'Design',
-  'Implantação',
-  'Facilidades',
-  'Contato',
-];
+import { useLanguage } from '@/context/LanguageContext';
 
 export default function SectionLinks({ animate = false, onClick, className }) {
+  const { translations } = useLanguage();
+
+  const SECTIONS = [
+    translations.header.milagres,
+    translations.header.features,
+    translations.header.residences,
+    translations.header.design,
+    translations.header.master_plan,
+    translations.header.amenities,
+    translations.header.contact,
+  ];
   return (
-    <menu className={className}>
+    <menu className={className} key={translations.header.features}>
       {SECTIONS.map(title => (
         <li key={title}>
           <Anchor {...{ title, animate, onClick }} />
