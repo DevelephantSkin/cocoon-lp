@@ -9,8 +9,11 @@ import cinema from '@/img/features/cinema.jpg';
 import dunySand from '@/img/duny-sand.png';
 import brandDark from '@/svg/brand-dark.svg';
 import IndexedCarousel from '@/components/indexedCarousel';
+import { useLanguage } from '@/context/LanguageContext';
 
 export default function Diferenciais() {
+  const { translations } = useLanguage();
+
   return (
     <section
       id="diferenciais"
@@ -18,13 +21,15 @@ export default function Diferenciais() {
     >
       <FeaturePanels
         featureLists={[
+          [translations.features.accessibility_convenience],
+          [translations.features.elevators],
+          [translations.features.bike_rack],
+          [translations.features.exclusive_restaurant_for_residents],
           [
-            'ACESSIBILIDADE E CONVENIÊNCIA',
-            'ELEVADORES',
-            'BICICLETÁRIO',
-            'RESTAURANTE EXCLUSIVO AOS CONDÔMINOS',
+            translations.features.leisure_well_being,
+            translations.features.gym,
+            translations.features.sand_floor,
           ],
-          ['LAZER E BEM-ESTAR', 'ACADEMIA', 'CHÃO DE AREIA'],
         ]}
         backImage={sandSurf}
         frontImage={gym}

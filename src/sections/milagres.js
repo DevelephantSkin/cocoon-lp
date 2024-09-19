@@ -15,8 +15,11 @@ import sandSurf from '@/img/sand-surf.png';
 import boats2 from '@/img/boats-2.png';
 import jeep from '@/img/jeep.png';
 import biosphereBrand from '@/svg/brand-biosphere.svg';
+import { useLanguage } from '@/context/LanguageContext';
 
 export default function Milagres() {
+  const { translations } = useLanguage();
+
   return (
     <section
       id="milagres"
@@ -39,42 +42,51 @@ export default function Milagres() {
         </div>
         <div className="cell-a self-end">
           <Article
+            key={translations.milagres.title1}
             title="Milagres"
-            subtitle={['Desconectar', 'para', 'reconectar.']}
+            subtitle={[
+              translations.milagres.title1,
+              translations.milagres.title2,
+              translations.milagres.title3,
+            ]}
             className="ml-auto max-w-md"
           >
-            Com suas praias de águas cristalinas e areias brancas, São Miguel
-            dos Milagres - AL é um destino turístico perfeito para quem busca
-            tranquilidade e beleza natural.
+            {translations.milagres.description}
           </Article>
           <ReefStamp
-            alt="Localizado na segunda maior barreira de corais do mundo"
+            key={translations.milagres.animated_image_description}
+            alt={translations.milagres.animated_image_description}
             className="mb-8 ml-auto mt-6 w-1/2 max-w-48 lg:mb-12 lg:mt-10"
           />
           <OverflowCarousel />
         </div>
         <Article
+          key={translations.praia_do_toque.title1}
           title="Praia do Toque"
           subtitle={[
-            'Invista e desfrute',
-            'de moradias',
-            'paradisíacas em',
-            'Cocoon Milagres.',
+            translations.praia_do_toque.title1,
+            translations.praia_do_toque.title2,
+            translations.praia_do_toque.title3,
+            translations.praia_do_toque.title4,
           ]}
           className="cell-b2 z-10 mt-16 max-w-xl self-end lg:ml-16"
           subtitleClass="max-w-lg"
         >
-          A Praia do Toque é procurada por quem deseja tranquilidade e contato
-          com a natureza. Suas piscinas naturais na maré baixa são ótimas para
-          mergulho e observação da vida marinha.
+          {translations.praia_do_toque.description}
         </Article>
       </div>
-      <Heading>Mascon Incorporadora e Biosphere</Heading>
+      <Heading key={translations.mascon.title}>
+        {translations.mascon.title}
+      </Heading>
       <div className="mx-auto lg:max-w-[80%]">
         <Video />
         <div className="ml-auto w-fit text-coco lg:mt-4">
-          <TextReveal duration={1.5} className="text-lg font-bold lg:text-2xl">
-            estilo de morar
+          <TextReveal
+            duration={1.5}
+            className="text-lg font-bold lg:text-2xl"
+            key={translations.mascon.subtitle}
+          >
+            {translations.mascon.subtitle}
           </TextReveal>
           <FadeTo
             direction="right"
