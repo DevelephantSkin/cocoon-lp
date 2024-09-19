@@ -7,26 +7,26 @@ export default function SectionLinks({ animate = false, onClick, className }) {
   const { translations } = useLanguage();
 
   const SECTIONS = [
-    translations.header.milagres,
-    translations.header.features,
-    translations.header.residences,
-    translations.header.design,
-    translations.header.master_plan,
-    translations.header.amenities,
-    translations.header.contact,
+    { title: translations.header.milagres, id: 'Milagres' },
+    { title: translations.header.features, id: 'Diferenciais' },
+    { title: translations.header.residences, id: 'Unidades' },
+    { title: translations.header.design, id: 'Design' },
+    { title: translations.header.master_plan, id: 'Implantação' },
+    { title: translations.header.amenities, id: 'Facilidades' },
+    { title: translations.header.contact, id: 'Contato' },
   ];
   return (
     <menu className={className} key={translations.header.features}>
-      {SECTIONS.map(title => (
-        <li key={title}>
-          <Anchor {...{ title, animate, onClick }} />
+      {SECTIONS.map(section => (
+        <li key={section.id}>
+          <Anchor {...{ id: section.id, animate, onClick }} />
         </li>
       ))}
     </menu>
   );
 }
 
-function Anchor({ title, animate, onClick }) {
+function Anchor({ id, animate, onClick }) {
   const Tag = animate ? TextReveal : Link;
 
   return (
@@ -34,10 +34,10 @@ function Anchor({ title, animate, onClick }) {
       tag={Link}
       delay={1}
       stagger={0.05}
-      href={buildHref(title)}
+      href={buildHref(id)}
       onClick={onClick}
     >
-      {title}
+      {id}
     </Tag>
   );
 }
