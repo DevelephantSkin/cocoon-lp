@@ -11,6 +11,7 @@ import maid from '@/img/services/maid.jpg';
 import phone from '@/img/services/phone.jpg';
 import vendingMachine from '@/img/services/vending-machine.jpg';
 import washers from '@/img/services/washers.jpg';
+import { useLanguage } from '@/context/LanguageContext';
 
 function service(image, title) {
   return (
@@ -39,6 +40,8 @@ function service(image, title) {
 }
 
 export default function CondoServices() {
+  const { translations } = useLanguage();
+
   return (
     <motion.div
       variants={{ init: {}, anim: { transition: { staggerChildren: 0.2 } } }}
@@ -46,14 +49,15 @@ export default function CondoServices() {
       whileInView="anim"
       viewport={{ once: true }}
       className="mx-auto mt-6 flex max-w-screen-fhd grid-cols-7 flex-wrap justify-evenly gap-4 lg:grid"
+      key={translations.services.living_room}
     >
-      {service(livingRoom, 'Entrega do imóvel mobiliado')}
-      {service(keys, 'Administração das locações')}
-      {service(bed, 'Enxoval completo')}
-      {service(vendingMachine, 'Facilidades inovadoras')}
-      {service(washers, 'Serviços exclusivos')}
-      {service(maid, 'Serviços de hotel')}
-      {service(phone, 'Aplicativo exclusivo aos condôminos')}
+      {service(livingRoom, translations.services.living_room)}
+      {service(keys, translations.services.keys)}
+      {service(bed, translations.services.bed)}
+      {service(vendingMachine, translations.services.vending_machine)}
+      {service(washers, translations.services.washers)}
+      {service(maid, translations.services.maid)}
+      {service(phone, translations.services.phone)}
     </motion.div>
   );
 }

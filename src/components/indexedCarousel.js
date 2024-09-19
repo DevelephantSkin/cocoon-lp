@@ -21,21 +21,10 @@ import outdoorBistro from '@/img/features/outdoor-bistro.jpg';
 import pool from '@/img/features/pool.jpg';
 import sandCourt from '@/img/features/sand-court.jpg';
 import waterLounge from '@/img/features/water-lounge.jpg';
-
-const FEATURES = [
-  { name: 'Área Externa', img: externalArea },
-  { name: 'Fachada Interna', img: indoorFacade },
-  { name: 'Piscina', img: pool },
-  { name: 'Lounge Submerso', img: waterLounge },
-  { name: 'Bistro Externo', img: outdoorBistro },
-  { name: 'Bistro Interno', img: indoorBistro },
-  { name: 'Academia', img: gym },
-  { name: 'Beach Tennis', img: sandCourt },
-  { name: 'Cinema', img: cinema },
-  { name: 'Portaria', img: entrance },
-];
+import { useLanguage } from '@/context/LanguageContext';
 
 export default function IndexedCarousel() {
+  const { translations } = useLanguage();
   const [swiper, setSwiper] = useState(null);
   const [currentSlide, setSlide] = useState(0);
 
@@ -43,6 +32,19 @@ export default function IndexedCarousel() {
     setSlide(index);
     swiper.slideTo(index);
   };
+
+  const FEATURES = [
+    { name: translations.features.external_area, img: externalArea },
+    { name: translations.features.indoor_facade, img: indoorFacade },
+    { name: translations.features.pool, img: pool },
+    { name: translations.features.water_lounge, img: waterLounge },
+    { name: translations.features.outdoor_bistro, img: outdoorBistro },
+    { name: translations.features.indoor_bistro, img: indoorBistro },
+    { name: translations.features.gym, img: gym },
+    { name: translations.features.sand_court, img: sandCourt },
+    { name: translations.features.cinema, img: cinema },
+    { name: translations.features.entrance, img: entrance },
+  ];
 
   return (
     <div className="mt-6 flex flex-row-reverse flex-wrap items-center justify-center gap-6 lg:mt-20 lg:gap-24">
@@ -107,6 +109,7 @@ export default function IndexedCarousel() {
       </motion.div>
       {/* TODO: extract to Ul */}
       <motion.ul
+        key={translations.features.external_area}
         variants={{
           init: {},
           anim: { transition: { staggerChildren: 0.1 } },

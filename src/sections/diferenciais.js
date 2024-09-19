@@ -40,14 +40,18 @@ export default function Diferenciais() {
       <FeaturePanels
         featureLists={[
           [
-            'FACILIDADES DO DIA A DIA',
-            'LAVANDERIA OMO',
-            'MINI MERCADO',
-            'MINI FARMÁCIA',
-            'LOCKER',
-            'RECEPÇÃO AOS HÓSPEDES',
+            translations.features.daily_facilities,
+            translations.features.omo_laundry,
+            translations.features.mini_market,
+            translations.features.mini_pharmacy,
+            translations.features.locker,
+            translations.features.guest_reception,
           ],
-          ['CONFORTO EXCLUSIVO', 'LOUNGE SUBMERSO', 'CINEMA AO AR LIVRE'],
+          [
+            translations.features.exclusive_comfort,
+            translations.features.submerged_lounge,
+            translations.features.open_air_cinema,
+          ],
         ]}
         backImage={dunySand}
         frontImage={cinema}

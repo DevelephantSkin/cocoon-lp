@@ -6,14 +6,43 @@ import MotionTag from '@/components/animations/motionTag';
 import TextReveal from '@/components/animations/textReveal';
 
 import map from '@/img/map.png';
+import { useLanguage } from '@/context/LanguageContext';
 
 export default function Implantacao() {
+  const { translations } = useLanguage();
+
+  const AREAS = [
+    translations.implantacao.reception,
+    translations.implantacao.pool,
+    translations.implantacao.exclusive_restaurant,
+    translations.implantacao.beach_tennis,
+    translations.implantacao.gym,
+    translations.implantacao.block_1,
+    translations.implantacao.block_2,
+    translations.implantacao.block_3,
+    translations.implantacao.block_4,
+    translations.implantacao.block_5,
+    translations.implantacao.block_6,
+    translations.implantacao.block_7,
+    translations.implantacao.block_8,
+    translations.implantacao.stairs,
+    translations.implantacao.elevators,
+    translations.implantacao.outdoor_cinema,
+    translations.implantacao.bike_rack,
+    translations.implantacao.dressing_rooms,
+    translations.implantacao.laundry,
+    translations.implantacao.sea,
+  ];
+
   return (
     <section
       id="implantacao"
       className="grid-implantacao relative z-10 mx-auto mt-12 place-items-start gap-x-24 bg-sand lg:ml-24 lg:mt-40 lg:grid lg:max-w-[80%]"
+      key={translations.implantacao.title}
     >
-      <Heading className="cell-b1 !mt-0">Implantação</Heading>
+      <Heading className="cell-b1 !mt-0">
+        {translations.implantacao.title}
+      </Heading>
       <div className="cell-a ml-auto overflow-hidden rounded-[2rem]">
         <MotionTag
           tag={Image}
@@ -67,35 +96,12 @@ export default function Implantacao() {
           className="mt-4 border-t-hpx border-cacao"
         />
         <TextReveal delay={1.5} className="mt-4 w-fit text-[1.5rem] leading-4">
-          ÁREA DE LAZER COM 200M²
+          {translations.implantacao.area}
         </TextReveal>
       </div>
     </section>
   );
 }
-
-const AREAS = [
-  'Recepção',
-  'Piscina',
-  'Restaurante Exclusivo',
-  'Beach Tennis',
-  'Academia',
-  'Bloco 1',
-  'Bloco 2',
-  'Bloco 3',
-  'Bloco 4',
-  'Bloco 5',
-  'Bloco 6',
-  'Bloco 7',
-  'Bloco 8',
-  'Escadas',
-  'Elevadores',
-  'Cinema ao ar livre',
-  'Bicicletário',
-  'Vestiários',
-  'Lavanderia',
-  'Mar',
-];
 
 const LI_CLASSES = [
   'relative',
