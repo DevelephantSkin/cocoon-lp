@@ -21,10 +21,12 @@ export default function Diferenciais() {
     >
       <FeaturePanels
         featureLists={[
-          [translations.features.accessibility_convenience],
-          [translations.features.elevators],
-          [translations.features.bike_rack],
-          [translations.features.exclusive_restaurant_for_residents],
+          [
+            translations.features.accessibility_convenience,
+            translations.features.elevators,
+            translations.features.bike_rack,
+            translations.features.exclusive_restaurant_for_residents,
+          ],
           [
             translations.features.leisure_well_being,
             translations.features.gym,
