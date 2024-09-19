@@ -7,13 +7,16 @@ import TextReveal from './animations/textReveal';
 
 import brand from '@/svg/brand-mascon.svg';
 import upArrow from '@/svg/arrow-up.svg';
+import { useLanguage } from '@/context/LanguageContext';
 
 export default function Footer() {
+  const { translations } = useLanguage();
+
   return (
     <footer className="bg-cacao p-8 pb-8 pt-4 text-center text-xs text-white lg:py-8">
       <div className="max-w-header mx-auto grid grid-cols-[1.5rem_1fr_1.5rem]">
         <div></div>
-        <div>
+        <div key={translations.footer.rights}>
           <MotionTag
             tag={Image}
             src={brand}
@@ -25,13 +28,9 @@ export default function Footer() {
             className="mx-auto mt-4 h-24"
           />
           <TextReveal stagger={0.02} className="mt-8">
-            ©2024 - Cocoon Milagres. Todos os direitos reservados.
+            {translations.footer.rights}
           </TextReveal>
-          <p className="mt-4">
-            Imagens meramente ilustrativas. Prevalecem as especificações do
-            memorial descritivo constante no contrato de compra e venda do
-            imóvel.
-          </p>
+          <p className="mt-4">{translations.footer.images_alert}</p>
         </div>
         <div className="flex h-full flex-col justify-between pb-1">
           <Link href="#inicio">
