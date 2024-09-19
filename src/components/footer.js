@@ -9,7 +9,7 @@ import brand from '@/svg/brand-mascon.svg';
 import upArrow from '@/svg/arrow-up.svg';
 import { useLanguage } from '@/context/LanguageContext';
 
-export default function Footer() {
+export default function Footer({ hidePrivacyPolice }) {
   const { translations } = useLanguage();
 
   return (
@@ -31,6 +31,11 @@ export default function Footer() {
             {translations.footer.rights}
           </TextReveal>
           <p className="mt-4">{translations.footer.images_alert}</p>
+          {!hidePrivacyPolice && (
+            <div style={{ fontSize: 15, marginTop: 20 }}>
+              <Link href="/privacy_police">Privacy Policy</Link>
+            </div>
+          )}
         </div>
         <div className="flex h-full flex-col justify-between pb-1">
           <Link href="#inicio">
