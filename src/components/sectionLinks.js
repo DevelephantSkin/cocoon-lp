@@ -1,30 +1,50 @@
 import Link from 'next/link';
 
 import TextReveal from './animations/textReveal';
+import { useLanguage } from '@/context/LanguageContext';
 
-const SECTIONS = [
-  'Milagres',
-  'Diferenciais',
-  'Unidades',
-  'Design',
-  'Implantação',
-  'Facilidades',
-  'Contato',
-];
+export default function SectionLinks({
+  animate = false,
+  onClick,
+  className,
+  isPrivacyPolicyPage,
+}) {
+  const { translations } = useLanguage();
 
-export default function SectionLinks({ animate = false, onClick, className }) {
+  const SECTIONS = isPrivacyPolicyPage
+    ? [{ title: 'Home', id: 'Home' }]
+    : [
+        { title: translations.header.milagres, id: 'Milagres' },
+        { title: translations.header.features, id: 'Diferenciais' },
+        { title: translations.header.residences, id: 'Unidades' },
+        { title: translations.header.design, id: 'Design' },
+        { title: translations.header.master_plan, id: 'Implantação' },
+        { title: translations.header.amenities, id: 'Facilidades' },
+        { title: translations.header.contact, id: 'Contato' },
+      ];
   return (
-    <menu className={className}>
-      {SECTIONS.map(title => (
-        <li key={title}>
-          <Anchor {...{ title, animate, onClick }} />
+    <menu
+      className={className}
+      key={isPrivacyPolicyPage ? undefined : translations.header.features}
+    >
+      {SECTIONS.map(section => (
+        <li key={section.id}>
+          <Anchor
+            {...{
+              id: section.id,
+              animate,
+              onClick,
+              isPrivacyPolicyPage,
+              title: section.title,
+            }}
+          />
         </li>
       ))}
     </menu>
   );
 }
 
-function Anchor({ title, animate, onClick }) {
+function Anchor({ id, animate, onClick, isPrivacyPolicyPage, title }) {
   const Tag = animate ? TextReveal : Link;
 
   return (
@@ -32,7 +52,7 @@ function Anchor({ title, animate, onClick }) {
       tag={Link}
       delay={1}
       stagger={0.05}
-      href={buildHref(title)}
+      href={isPrivacyPolicyPage ? '/' : buildHref(id)}
       onClick={onClick}
     >
       {title}

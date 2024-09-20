@@ -9,8 +9,11 @@ import cinema from '@/img/features/cinema.jpg';
 import dunySand from '@/img/duny-sand.png';
 import brandDark from '@/svg/brand-dark.svg';
 import IndexedCarousel from '@/components/indexedCarousel';
+import { useLanguage } from '@/context/LanguageContext';
 
 export default function Diferenciais() {
+  const { translations } = useLanguage();
+
   return (
     <section
       id="diferenciais"
@@ -19,12 +22,16 @@ export default function Diferenciais() {
       <FeaturePanels
         featureLists={[
           [
-            'ACESSIBILIDADE E CONVENIÊNCIA',
-            'ELEVADORES',
-            'BICICLETÁRIO',
-            'RESTAURANTE EXCLUSIVO AOS CONDÔMINOS',
+            translations.features.accessibility_convenience,
+            translations.features.elevators,
+            translations.features.bike_rack,
+            translations.features.exclusive_restaurant_for_residents,
           ],
-          ['LAZER E BEM-ESTAR', 'ACADEMIA', 'CHÃO DE AREIA'],
+          [
+            translations.features.leisure_well_being,
+            translations.features.gym,
+            translations.features.sand_floor,
+          ],
         ]}
         backImage={sandSurf}
         frontImage={gym}
@@ -33,14 +40,18 @@ export default function Diferenciais() {
       <FeaturePanels
         featureLists={[
           [
-            'FACILIDADES DO DIA A DIA',
-            'LAVANDERIA OMO',
-            'MINI MERCADO',
-            'MINI FARMÁCIA',
-            'LOCKER',
-            'RECEPÇÃO AOS HÓSPEDES',
+            translations.features.daily_facilities,
+            translations.features.omo_laundry,
+            translations.features.mini_market,
+            translations.features.mini_pharmacy,
+            translations.features.locker,
+            translations.features.guest_reception,
           ],
-          ['CONFORTO EXCLUSIVO', 'LOUNGE SUBMERSO', 'CINEMA AO AR LIVRE'],
+          [
+            translations.features.exclusive_comfort,
+            translations.features.submerged_lounge,
+            translations.features.open_air_cinema,
+          ],
         ]}
         backImage={dunySand}
         frontImage={cinema}

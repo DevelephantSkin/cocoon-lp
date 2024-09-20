@@ -11,6 +11,9 @@ import brandText from '@/svg/brand-text.svg';
 import housi from '@/svg/brand-housi.svg';
 import SectionLinks from './sectionLinks';
 import SocialLinks from './socialLinks';
+import brazilIcon from '@/svg/brazil.svg';
+import UnitedStatesIcon from '@/svg/united_states.svg';
+import { useLanguage } from '@/context/LanguageContext';
 
 const FADE_IN_PROPS = {
   initial: { opacity: 0 },
@@ -72,6 +75,8 @@ function Mobile({ hasBg }) {
 }
 
 function Desktop({ hasBg }) {
+  const { language, setLanguage } = useLanguage();
+
   return (
     <div className="relative mx-auto hidden h-full max-w-xw grid-rows-2 px-8 py-6 lg:grid">
       <Link
@@ -96,13 +101,29 @@ function Desktop({ hasBg }) {
           alt="cocoon."
           className={'h-3.5 w-fit ' + (hasBg ? 'filter-cacao' : '')}
         />
-        <MotionTag
-          tag={Image}
-          src={housi}
-          alt=""
-          className={'mr-px h-2 w-fit ' + (hasBg ? 'filter-cacao' : '')}
-          {...FADE_IN_PROPS}
-        />
+        <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
+          <div style={{ display: 'flex', alignItems: 'center' }}>
+            <button
+              onClick={() => {
+                setLanguage(prevstate => (prevstate === 'pt' ? 'en' : 'pt'));
+              }}
+            >
+              <Image
+                src={language === 'pt' ? brazilIcon : UnitedStatesIcon}
+                alt=""
+                width={20}
+                height={20}
+              />
+            </button>
+          </div>
+          <MotionTag
+            tag={Image}
+            src={housi}
+            alt=""
+            className={'mr-px h-2 w-fit ' + (hasBg ? 'filter-cacao' : '')}
+            {...FADE_IN_PROPS}
+          />
+        </div>
         <motion.hr
           animate={{ width: '100%' }}
           transition={{ delay: 1, duration: 1.5, ease: 'easeOut' }}

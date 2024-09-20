@@ -7,9 +7,11 @@ import TextReveal from '@/components/animations/textReveal';
 import downArrow from '@/svg/arrow-down.svg';
 import { useState } from 'react';
 import LineByLine from '@/components/animations/lineByLine';
+import { useLanguage } from '@/context/LanguageContext';
 
 // TODO: orchestrate animation staggering through parent component
 export default function Cover() {
+  const { translations } = useLanguage();
   const [imgLoaded, setImgLoaded] = useState(true);
 
   return (
@@ -25,22 +27,33 @@ export default function Cover() {
         <div className="relative mx-auto h-full max-w-xw p-8">
           <div className="center-y space-y-6">
             <LineByLine
+              key={translations.cover.title1}
               tag="h1"
-              lines={['É tempo', 'de voltar', 'ao', 'casulo.']}
+              lines={[
+                translations.cover.title1,
+                translations.cover.title2,
+                translations.cover.title3,
+                translations.cover.title4,
+              ]}
               delay={0.75}
               className="text-4xl uppercase"
             />
-            <TextReveal delay={1.75} className="uppercase">
-              É tempo de Cocoon.
+            <TextReveal
+              delay={1.75}
+              className="uppercase"
+              key={translations.cover.subtitle}
+            >
+              {translations.cover.subtitle}
             </TextReveal>
             <motion.a
+              key={translations.cover.button}
               href="#contato"
               initial={{ scale: 0 }}
               animate={{ scale: 1 }}
               transition={{ delay: 2.5, duration: 0.5, ease: 'backOut' }}
               className="block w-full border py-4 text-center text-lg font-bold transition-colors duration-300 hover:bg-white hover:text-[#2D6861]"
             >
-              registre-se
+              {translations.cover.button}
             </motion.a>
           </div>
           <Link href="#milagres">
