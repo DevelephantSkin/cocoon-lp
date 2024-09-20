@@ -6,6 +6,7 @@ import MotionTag from './animations/motionTag';
 import TextReveal from './animations/textReveal';
 
 import expandIcon from '@/svg/icon-expand.svg';
+import { useLanguage } from '@/context/LanguageContext';
 
 function expandImage(imgRef) {
   const img = imgRef.current;
@@ -19,6 +20,7 @@ function expandImage(imgRef) {
 
 export default function ExpandableImage({ src, alt, title }) {
   const imgRef = useRef();
+  const { translations } = useLanguage();
 
   return (
     <>
@@ -44,7 +46,7 @@ export default function ExpandableImage({ src, alt, title }) {
           transition={{ delay: 1, duration: 1 }}
           viewport={{ once: true }}
         >
-          ABRIR IMAGEM
+          {translations.expand_image}
           <Image src={expandIcon} alt="" className="ml-1 inline" />
         </motion.button>
       </div>

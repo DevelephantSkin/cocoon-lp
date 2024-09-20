@@ -5,14 +5,29 @@ import { motion } from 'framer-motion';
 import useMatchScreen from '@/lib/useMatchScreen';
 
 import TextReveal from './animations/textReveal';
+import { useLanguage } from '@/context/LanguageContext';
 
 export default function Form() {
   const url = process.env.NEXT_PUBLIC_REGISTER_BACKEND_URL;
+  const { translations } = useLanguage();
 
   const [submitted, setSubmitted] = useState();
   const [submitting, setSubmitting] = useState(false);
   const { executeRecaptcha } = useReCaptcha();
   const isDesktop = useMatchScreen('lg');
+
+  const FIELDS = [
+    { label: translations.contato.name, type: 'text', name: 'firstName' },
+    { label: translations.contato.last_name, type: 'text', name: 'lastName' },
+    { label: translations.contato.email, type: 'email', name: 'email' },
+    { label: translations.contato.phone, type: 'tel', name: 'phone' },
+    {
+      label: translations.contato.know_us,
+      type: 'text',
+      name: 'referral',
+      optional: true,
+    },
+  ];
 
   const onSubmit = async e => {
     e.preventDefault();
@@ -47,8 +62,7 @@ export default function Form() {
 
   return submitted ? (
     <p className="cell-b mt-8 self-center text-lg">
-      Recebemos seu cadastro! Em breve entraremos em contato com mais
-      informações.
+      {translations.contato.success}
     </p>
   ) : (
     <motion.form
@@ -68,6 +82,7 @@ export default function Form() {
       whileInView="anim"
       viewport={{ once: true }}
       className="cell-b mt-8"
+      key={translations.contato.title}
     >
       {FIELDS.map(({ label, type, name, optional }, i) => (
         <label key={name}>
@@ -91,8 +106,7 @@ export default function Form() {
       ))}
       {submitted === false && (
         <p className="text-lg">
-          Ocorreu um erro ao registrar seu cadastro. Por favor tente novamente
-          ou entre em contato pelo número{' '}
+          {translations.contato.error}{' '}
           <a
             href="https://api.whatsapp.com/send?phone=554888759299"
             className="underline"
@@ -113,24 +127,11 @@ export default function Form() {
         }}
         className="mt-16 block w-48 border border-cacao p-2 text-center font-bold outline-none transition-colors duration-300 hover:bg-cacao hover:text-sand focus:bg-cacao focus:text-sand disabled:bg-gray-300"
       >
-        registre-se
+        {translations.contato.button}
       </motion.button>
     </motion.form>
   );
 }
-
-const FIELDS = [
-  { label: 'Nome', type: 'text', name: 'firstName' },
-  { label: 'Sobrenome', type: 'text', name: 'lastName' },
-  { label: 'E-mail', type: 'email', name: 'email' },
-  { label: 'Telefone', type: 'tel', name: 'phone' },
-  {
-    label: 'Como você ouviu falar de nós?',
-    type: 'text',
-    name: 'referral',
-    optional: true,
-  },
-];
 
 const parseForm = form => {
   const data = new FormData(form);
