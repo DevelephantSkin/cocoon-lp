@@ -7,11 +7,11 @@ export default function SectionLinks({
   animate = false,
   onClick,
   className,
-  isPrivacyPolicyPage,
+  isPrivacyPolicePage,
 }) {
   const { translations } = useLanguage();
 
-  const SECTIONS = isPrivacyPolicyPage
+  const SECTIONS = isPrivacyPolicePage
     ? [{ title: 'Home', id: 'Home' }]
     : [
         { title: translations.header.milagres, id: 'Milagres' },
@@ -27,7 +27,7 @@ export default function SectionLinks({
       {SECTIONS.map(section => (
         <li key={section.id}>
           <Anchor
-            {...{ id: section.id, animate, onClick, isPrivacyPolicyPage }}
+            {...{ id: section.id, animate, onClick, isPrivacyPolicePage }}
           />
         </li>
       ))}
@@ -35,7 +35,7 @@ export default function SectionLinks({
   );
 }
 
-function Anchor({ id, animate, onClick, isPrivacyPolicyPage }) {
+function Anchor({ id, animate, onClick, isPrivacyPolicePage }) {
   const Tag = animate ? TextReveal : Link;
 
   return (
@@ -43,7 +43,7 @@ function Anchor({ id, animate, onClick, isPrivacyPolicyPage }) {
       tag={Link}
       delay={1}
       stagger={0.05}
-      href={isPrivacyPolicyPage ? '/' : buildHref(id)}
+      href={isPrivacyPolicePage ? '/' : buildHref(id)}
       onClick={onClick}
     >
       {id}
