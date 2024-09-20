@@ -1,12 +1,12 @@
 'use client';
 import Footer from '@/components/footer';
-import HeaderPrivacyPolice from '@/components/headerPrivacyPolice';
+import HeaderPrivacyPolicy from '@/components/HeaderPrivacyPolicy';
 import { LanguageProvider } from '@/context/LanguageContext';
 
-export default function PrivacyPolicePage() {
+export default function PrivacyPolicyPage() {
   return (
     <LanguageProvider>
-      <HeaderPrivacyPolice />
+      <HeaderPrivacyPolicy />
       <div
         style={{
           height: '100dvh',
@@ -17,7 +17,7 @@ export default function PrivacyPolicePage() {
       >
         <h1>Privacy Policy</h1>
       </div>
-      <Footer hidePrivacyPolice />
+      <Footer hidePrivacyPolicy />
     </LanguageProvider>
   );
 }
