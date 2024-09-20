@@ -21,7 +21,7 @@ const FADE_IN_PROPS = {
   transition: { delay: 2, duration: 1 },
 };
 
-export default function HeaderPrivacyPolice() {
+export default function HeaderPrivacyPolicy() {
   return (
     <motion.header
       initial={{ opacity: 0 }}
@@ -95,7 +95,7 @@ function Desktop() {
         <nav>
           <SectionLinks
             className={'flex gap-5 font-bold uppercase text-cacao'}
-            isPrivacyPolicePage
+            isPrivacyPolicyPage
             animate
           />
         </nav>
