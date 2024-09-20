@@ -1,6 +1,6 @@
 'use client';
 import Footer from '@/components/footer';
-import HeaderPrivacyPolicy from '@/components/HeaderPrivacyPolicy';
+import HeaderPrivacyPolicy from '@/components/headerPrivacyPolicy';
 import { LanguageProvider } from '@/context/LanguageContext';
 
 export default function PrivacyPolicyPage() {

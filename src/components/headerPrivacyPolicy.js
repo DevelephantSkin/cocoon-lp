@@ -1,9 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { useEffect, useState, useCallback } from 'react';
 import { motion } from 'framer-motion';
 
-import MenuMobile from './menuMobile';
 import MotionTag from './animations/motionTag';
 
 import logo from '@/svg/logo.svg';
@@ -40,7 +38,7 @@ function Desktop() {
   const { language, setLanguage } = useLanguage();
 
   return (
-    <div className="relative mx-auto hidden h-full max-w-xw grid-rows-2 px-8 py-6 lg:grid">
+    <div className="relative mx-auto grid h-full max-w-xw grid-rows-2 px-8 py-6">
       <Link
         href="#inicio"
         className="absolute inset-y-0 left-0 -translate-x-full"
