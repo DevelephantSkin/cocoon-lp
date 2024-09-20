@@ -27,7 +27,13 @@ export default function SectionLinks({
       {SECTIONS.map(section => (
         <li key={section.id}>
           <Anchor
-            {...{ id: section.id, animate, onClick, isPrivacyPolicyPage }}
+            {...{
+              id: section.id,
+              animate,
+              onClick,
+              isPrivacyPolicyPage,
+              title: section.title,
+            }}
           />
         </li>
       ))}
@@ -35,7 +41,7 @@ export default function SectionLinks({
   );
 }
 
-function Anchor({ id, animate, onClick, isPrivacyPolicyPage }) {
+function Anchor({ id, animate, onClick, isPrivacyPolicyPage, title }) {
   const Tag = animate ? TextReveal : Link;
 
   return (
@@ -46,7 +52,7 @@ function Anchor({ id, animate, onClick, isPrivacyPolicyPage }) {
       href={isPrivacyPolicyPage ? '/' : buildHref(id)}
       onClick={onClick}
     >
-      {id}
+      {title}
     </Tag>
   );
 }
