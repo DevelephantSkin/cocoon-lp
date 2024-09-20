@@ -19,8 +19,9 @@ const regulator = localFont({
 });
 
 export const metadata = {
-  title: 'cocoon.',
-  description: 'WIP',
+  title: 'Cocoon',
+  description:
+    'Conheça o Cocoon, uma obra-prima arquitetônica em São Miguel dos Milagres, Alagoas, onde a natureza se encontra com o requinte da vida moderna...',
 };
 
 export default function RootLayout({ children }) {
