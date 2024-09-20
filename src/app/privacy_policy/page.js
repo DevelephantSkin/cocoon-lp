@@ -3,8 +3,12 @@ import Footer from '@/components/footer';
 import HeaderPrivacyPolicy from '@/components/headerPrivacyPolicy';
 import { LanguageProvider } from '@/context/LanguageContext';
 import {
+  CocoonImageDiv,
+  CommitmentDiv,
+  CommitmentOptionList,
   Container,
   ContentContainer,
+  MoreInfomationDiv,
   OptionNumber,
   OptionsListDiv,
   PrivacyDiv,
@@ -13,6 +17,7 @@ import {
   TitleDiv,
 } from './styles';
 import logo from '@/svg/logo.svg';
+import logoMilk from '@/svg/logo-milk.svg';
 import brandText from '@/svg/brand-text.svg';
 import Image from 'next/image';
 
@@ -30,7 +35,6 @@ export default function PrivacyPolicyPage() {
                 width={40}
                 className={'filter-cacao'}
               />
-
               <Image
                 src={brandText}
                 alt="cocoon."
@@ -153,6 +157,58 @@ export default function PrivacyPolicyPage() {
               </div>
             </OptionsListDiv>
           </PrivacyDiv>
+          <CommitmentDiv>
+            <CocoonImageDiv>
+              <Image src={logoMilk} alt="Logo Cocoon" />
+            </CocoonImageDiv>
+            <h1 className="text-2xl">COMPROMISSO DO USUÁRIO.</h1>
+            <TextsDiv>
+              <p>
+                <span>
+                  O usuário se compromete a fazer uso adequado dos conteúdos e
+                  da informação que o Cocoon Milagres oferece no site e com
+                  caráter enunciativo, mas não limitativo:
+                </span>
+              </p>
+            </TextsDiv>
+            <CommitmentOptionList>
+              <p>
+                <span>{'A) '}</span>Não se envolver em atividades que sejam
+                ilegais ou contrárias à boa fé à ordem pública;
+              </p>
+              <p>
+                <span>{'B) '}</span>Não difundir propaganda ou conteúdo de
+                natureza racista, xenofóbica, kiwibet ou azar, qualquer tipo de
+                pornografia ilegal, de apologia ao terrorismo ou contra os
+                direitos humanos;
+              </p>
+              <p>
+                <span>{'C) '}</span>Não causar danos aos sistemas físicos
+                (hardwares) e lógicos (softwares) do Cocoon Milagres, de seus
+                fornecedores ou terceiros, para introduzir ou disseminar vírus
+                informáticos ou quaisquer outros sistemas de hardware ou
+                software que sejam capazes de causar danos anteriormente
+                mencionados.
+              </p>
+            </CommitmentOptionList>
+          </CommitmentDiv>
+          <MoreInfomationDiv>
+            <h1 className="text-2xl">MAIS INFORMAÇÕES.</h1>
+            <TextsDiv>
+              <p>
+                Esperemos que esteja esclarecido e, como mencionado
+                anteriormente, se houver algo que você não tem certeza se
+                precisa ou não, geralmente é mais seguro deixar os cookies
+                ativados, caso interaja com um dos recursos que você usa em
+                nosso site
+              </p>
+              <p>
+                <span>
+                  Esta política é efetiva a partir de 01 de janeiro de 2024.
+                </span>
+              </p>
+            </TextsDiv>
+          </MoreInfomationDiv>
         </ContentContainer>
       </Container>
       <Footer hidePrivacyPolicy />

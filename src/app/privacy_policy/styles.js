@@ -100,3 +100,49 @@ export const OptionNumber = styled.div`
     padding: 0;
   }
 `;
+
+export const CommitmentDiv = styled.div`
+  position: relative;
+  margin-top: 150px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+`;
+
+export const CommitmentOptionList = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  > p {
+    span {
+      font-size: 1.1rem;
+      font-weight: bolder;
+    }
+  }
+`;
+
+export const CocoonImageDiv = styled.div`
+  height: 50dvh;
+  position: absolute;
+  z-index: -1;
+  right: 0;
+  top: -120px;
+
+  img {
+    width: 100%;
+    height: 100%;
+  }
+
+  @media (min-width: 1500px) {
+    right: 100px;
+    top: -140px;
+  }
+`;
+
+export const MoreInfomationDiv = styled.div`
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+`;
