@@ -39,10 +39,7 @@ function Desktop() {
 
   return (
     <div className="relative mx-auto grid h-full max-w-xw grid-rows-2 px-8 py-6">
-      <Link
-        href="#inicio"
-        className="absolute inset-y-0 left-0 -translate-x-full"
-      >
+      <Link href="/" className="absolute inset-y-0 left-0 -translate-x-full">
         <Image
           src={logo}
           alt="Logo Cocoon - figura de um casulo em vetores"

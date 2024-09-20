@@ -23,7 +23,10 @@ export default function SectionLinks({
         { title: translations.header.contact, id: 'Contato' },
       ];
   return (
-    <menu className={className} key={translations.header.features}>
+    <menu
+      className={className}
+      key={isPrivacyPolicyPage ? undefined : translations.header.features}
+    >
       {SECTIONS.map(section => (
         <li key={section.id}>
           <Anchor

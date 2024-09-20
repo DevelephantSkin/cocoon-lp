@@ -32,8 +32,10 @@ export default function Footer({ hidePrivacyPolicy }) {
           </TextReveal>
           <p className="mt-4">{translations.footer.images_alert}</p>
           {!hidePrivacyPolicy && (
-            <div style={{ fontSize: 15, marginTop: 20 }}>
-              <Link href="/privacy_policy">Privacy Policy</Link>
+            <div style={{ marginTop: 20, fontWeight: 600 }}>
+              <Link className="text-base" href="/privacy_policy">
+                Privacy Policy
+              </Link>
             </div>
           )}
         </div>
