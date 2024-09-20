@@ -146,5 +146,29 @@
   "footer": {
     "rights": "©2024 - Cocoon Milagres. All rights reserved.",
     "images_alert": "Images are for illustrative purposes only. The specifications in the purchase contract’s descriptive memorandum shall prevail."
+  },
+  "privacy": {
+    "title": "PRIVACY POLICY",
+    "privacy_title1": "YOUR PRIVACY IS",
+    "privacy_title2": "IMPORTANT TO US.",
+    "privacy_description1": "It is Cocoon Milagres’ policy to respect your privacy regarding any information we may collect from the Cocoon Milagres website and other sites we own and operate.",
+    "privacy_description2": "We only request personal information when we truly need it to provide you with a service. We do so by fair and legal means, with your knowledge and consent. We also inform you of why we are collecting it and how it will be used.",
+    "privacy_description3": "We retain the information collected only for as long as necessary to provide the requested service. When storing data, we protect it using commercially acceptable means to prevent loss and theft, as well as unauthorized access, disclosure, copying, use, or modification.",
+    "privacy_description4": "We do not share personally identifiable information publicly or with third parties, except when required by law.",
+    "privacy_description5": "Our site may contain links to external sites that are not operated by us. Please be aware that we have no control over the content and practices of these sites and cannot take responsibility for their respective privacy policies.",
+    "privacy_description6": "You are free to refuse our request for personal information, understanding that we may not be able to provide some of the desired services. Continued use of our site will be considered as acceptance of our practices regarding privacy and personal information. ",
+    "privacy_description7": "If you have any questions about how we handle user data and personal information, please contact us.",
+    "privacy_option1": "The Google AdSense service we use to display advertisements employs a DoubleClick cookie to serve more relevant ads across the web and limit the number of times a specific ad is shown to you.",
+    "privacy_option2": "For more information about Google AdSense, refer to the official Google AdSense privacy FAQs.",
+    "privacy_option3": "We use advertisements to offset the costs of operating this site and to fund future developments. The behavioral advertising cookies used by this site are designed to ensure you receive the most relevant ads possible by anonymously tracking your interests and showing similar content that may interest you.",
+    "privacy_option4": "Various partners advertise on our behalf, and affiliate track of cookies allow us to see if our customers accessed the site through one of our partner sites, so we can credit them appropriately and, where applicable, enable our affiliate partners to offer any promotions that might encourage a purchase.",
+    "commitment_title": "USER COMMITMENT",
+    "commitment_description": "Users agree to make appropriate use of the content and information that Cocoon Milagres provides on the site, and with a non-limitative list:",
+    "commitment_option1": "Not to engage in activities that are illegal or contrary to good faith and public order;",
+    "commitment_option2": "Not to disseminate propaganda or content of a racist, xenophobic, deceptive, illegal pornography, terrorism advocacy, or human rights violations nature;",
+    "commitment_option3": "Not to cause damage to Cocoon Milagres’ physical (hardware) and logical (software) systems, those of its suppliers or third parties, by introducing or spreading computer viruses or any other hardware or software systems capable of causing the aforementioned damages",
+    "more_information_title": "MORE INFORMATION",
+    "more_information_description1": "We hope this clarifies things, and as mentioned before, if there is anything you are unsure about, it is generally safer to keep cookies enabled in case you interact with any features you use on our site.",
+    "more_information_description2": "This policy is effective from January 1, 2024."
   }
 }
