@@ -136,7 +136,7 @@ export default function PrivacyPolicyPage() {
                   usados por este site foram projetados para garantir que você
                   forneça os anúncios mais relevantes sempre que possível,
                   rastreando anonimamente seus interesses e apresentando coisas
-                  semelhantes que possam ser do seu interesse
+                  semelhantes que possam ser do seu interesse.
                 </p>
               </div>
               <div>
@@ -200,7 +200,7 @@ export default function PrivacyPolicyPage() {
                 anteriormente, se houver algo que você não tem certeza se
                 precisa ou não, geralmente é mais seguro deixar os cookies
                 ativados, caso interaja com um dos recursos que você usa em
-                nosso site
+                nosso site.
               </p>
               <p>
                 <span>
