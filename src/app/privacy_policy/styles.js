@@ -25,7 +25,7 @@ export const TitleDiv = styled.div`
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  gap: 60px;
+  gap: 50px;
 
   > div {
     display: flex;
