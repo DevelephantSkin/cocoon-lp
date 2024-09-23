@@ -8,11 +8,15 @@ import housiBrand from '@/svg/brand-housi.svg';
 
 import brand from '@/svg/brand.svg';
 import SectionLinks from './sectionLinks';
+import { useLanguage } from '@/context/LanguageContext';
+import brazilIcon from '@/svg/brazil.svg';
+import UnitedStatesIcon from '@/svg/united_states.svg';
 
 // heavily inspired on:
 // https://www.freecodecamp.org/news/how-to-create-an-animated-hamburger-menu-in-react/
 export default function MenuMobile() {
   const [isOpen, setOpen] = useState(false);
+  const { language, setLanguage } = useLanguage();
 
   useEffect(() => {
     document.body.style.overflow = isOpen ? 'hidden' : '';
@@ -32,7 +36,20 @@ export default function MenuMobile() {
             transition={{ duration: 0.5 }}
             className="absolute left-0 top-0 grid h-dvh w-screen grid-rows-[1fr_auto_1fr] bg-cacao p-8"
           >
-            <div className="min-h-1 w-full"></div>
+            <div className="min-h-1 w-full">
+              <button
+                onClick={() => {
+                  setLanguage(prevstate => (prevstate === 'pt' ? 'en' : 'pt'));
+                }}
+              >
+                <Image
+                  src={language === 'pt' ? brazilIcon : UnitedStatesIcon}
+                  alt=""
+                  width={40}
+                  height={40}
+                />
+              </button>
+            </div>
             <div>
               <SectionLinks
                 onClick={() => setOpen(false)}
