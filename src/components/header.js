@@ -54,22 +54,40 @@ export default function Header() {
 }
 
 function Mobile({ hasBg }) {
+  const { language, setLanguage } = useLanguage();
+
   return (
     <div className="flex h-full grid-cols-[3rem_1fr_3rem] items-center justify-between px-8 py-4 lg:hidden">
-      <Link href="#inicio" className="h-full">
+      <div className="flex h-full items-center gap-4">
+        <Link href="#inicio" className="h-full">
+          <Image
+            src={logo}
+            alt="Logo Cocoon - figura de um casulo em vetores"
+            className={'max-h-full ' + (hasBg ? 'filter-cacao' : '')}
+          />
+        </Link>
         <Image
-          src={logo}
-          alt="Logo Cocoon - figura de um casulo em vetores"
-          className={'max-h-full ' + (hasBg ? 'filter-cacao' : '')}
+          src={brandText}
+          alt="cocoon."
+          height="18"
+          className={'justify-self-center ' + (hasBg ? 'filter-cacao' : '')}
         />
-      </Link>
-      <Image
-        src={brandText}
-        alt="cocoon."
-        height="18"
-        className={'justify-self-center ' + (hasBg ? 'filter-cacao' : '')}
-      />
-      <MenuMobile />
+      </div>
+      <div className="flex h-full items-center gap-7">
+        <button
+          onClick={() => {
+            setLanguage(prevstate => (prevstate === 'pt' ? 'en' : 'pt'));
+          }}
+        >
+          <Image
+            src={language === 'pt' ? brazilIcon : UnitedStatesIcon}
+            alt=""
+            width={24}
+            height={24}
+          />
+        </button>
+        <MenuMobile />
+      </div>
     </div>
   );
 }
