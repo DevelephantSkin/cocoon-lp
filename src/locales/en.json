@@ -141,7 +141,8 @@
     "last_name": "Last Name",
     "email": "Email",
     "phone": "Phone",
-    "know_us": "How did you hear about us?"
+    "know_us": "How did you hear about us?",
+    "contact_us": "Get in touch"
   },
   "footer": {
     "rights": "©2024 - Cocoon Milagres. All rights reserved.",
