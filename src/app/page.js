@@ -12,6 +12,7 @@ import Implantacao from '@/sections/implantacao';
 import Facilidades from '@/sections/facilidades';
 import Contato from '@/sections/contato';
 import { LanguageProvider } from '@/context/LanguageContext';
+import ContactUs from '../components/contactUs';
 
 export default function Home() {
   return (
@@ -28,6 +29,7 @@ export default function Home() {
         <Contato />
       </main>
       <Footer />
+      <ContactUs />
     </LanguageProvider>
   );
 }
