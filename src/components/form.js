@@ -8,7 +8,7 @@ import TextReveal from './animations/textReveal';
 import { useLanguage } from '@/context/LanguageContext';
 
 export default function Form() {
-  const url = process.env.NEXT_PUBLIC_REGISTER_BACKEND_URL;
+  const url = '/api/register';
   const { translations } = useLanguage();
 
   const [submitted, setSubmitted] = useState();

@@ -10,11 +10,13 @@
   },
   "dependencies": {
     "@tailwindcss/container-queries": "^0.1.1",
+    "@vercel/functions": "^1.4.1",
     "@vimeo/player": "^2.23.0",
     "framer-motion": "^11.2.6",
     "hamburger-react": "^2.5.1",
     "next": "14.2.3",
     "next-recaptcha-v3": "^1.4.1",
+    "nodemailer": "^6.9.15",
     "react": "^18",
     "react-dom": "^18",
     "styled-components": "^6.1.13",
