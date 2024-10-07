@@ -142,7 +142,8 @@
     "email": "Email",
     "phone": "Phone",
     "know_us": "How did you hear about us?",
-    "contact_us": "Get in touch"
+    "contact_us": "Get in touch",
+    "whatsapp_message": "Hello, I was browsing your website and I'm interested in learning more about Cocoon. Could you provide me with additional information about the product?"
   },
   "footer": {
     "rights": "©2024 - Cocoon Milagres. All rights reserved.",
