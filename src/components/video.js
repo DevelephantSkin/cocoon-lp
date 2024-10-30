@@ -25,7 +25,7 @@ export default function Video({ videoId, cover }) {
         color: '744441',
         autopause: true,
         pip: true,
-        texttrack: language == 'pt' ? 'pt-BR' : 'en-US',
+        texttrack: language == 'pt' ? 'pt-BR' : 'en',
         playsinline: false,
       }),
     );
