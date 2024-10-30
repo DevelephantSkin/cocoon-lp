@@ -7,8 +7,9 @@ import MotionTag from './animations/motionTag';
 
 import cover from '@/img/video-cover.png';
 import playBtn from '@/svg/play.svg';
+import { useLanguage } from '@/context/LanguageContext';
 
-export default function Video() {
+  const { language } = useLanguage()
   const ref = useRef(null);
   const [player, setPlayer] = useState(null);
   const [started, setStarted] = useState(false);
@@ -24,6 +25,7 @@ export default function Video() {
         color: '744441',
         autopause: true,
         pip: true,
+        texttrack: language == 'pt' ? 'pt-BR' : 'en-US',
         playsinline: false,
       }),
     );
