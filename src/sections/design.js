@@ -10,6 +10,9 @@ import sofa from '@/img/sofa.png';
 import trees from '@/img/trees.png';
 import chair from '@/img/chair.png';
 import { useLanguage } from '@/context/LanguageContext';
+import Video from '@/components/video';
+import cover from '@/img/video-cover-2.png';
+
 
 export default function Design() {
   const { translations } = useLanguage();
@@ -65,21 +68,7 @@ export default function Design() {
       </motion.div>
       <Heading className="lg:mt-24">{translations.design.video_title}</Heading>
       <div className="mx-auto lg:max-w-[80%]">
-        <video
-          poster="https://media.cocoonmilagres.com.br/img/permita-se-transformar.webp"
-          class="w-full"
-          controls
-          playsInline
-        >
-          <source
-            src="https://media.cocoonmilagres.com.br/video/permita-se-transformar.webm"
-            type="video/webm"
-          />
-          <source
-            src="https://media.cocoonmilagres.com.br/video/permita-se-transformar.mp4"
-            type="video/mp4"
-          />
-        </video>
+        <Video videoId='1024899193' cover={cover}/>
       </div>
     </section>
   );

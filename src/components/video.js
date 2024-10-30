@@ -5,10 +5,10 @@ import Player from '@vimeo/player';
 
 import MotionTag from './animations/motionTag';
 
-import cover from '@/img/video-cover.png';
 import playBtn from '@/svg/play.svg';
 import { useLanguage } from '@/context/LanguageContext';
 
+export default function Video({ videoId, cover }) {
   const { language } = useLanguage()
   const ref = useRef(null);
   const [player, setPlayer] = useState(null);
@@ -17,7 +17,7 @@ import { useLanguage } from '@/context/LanguageContext';
   useEffect(() => {
     setPlayer(
       new Player(ref.current, {
-        id: '967169595',
+        id: videoId,
         responsive: true,
         portrait: false,
         title: false,

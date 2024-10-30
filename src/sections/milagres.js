@@ -16,6 +16,7 @@ import boats2 from '@/img/boats-2.png';
 import jeep from '@/img/jeep.png';
 import biosphereBrand from '@/svg/brand-biosphere.svg';
 import { useLanguage } from '@/context/LanguageContext';
+import cover from '@/img/video-cover.png';
 
 export default function Milagres() {
   const { translations } = useLanguage();
@@ -79,7 +80,7 @@ export default function Milagres() {
         {translations.mascon.title}
       </Heading>
       <div className="mx-auto lg:max-w-[80%]">
-        <Video />
+        <Video videoId='967169595' cover={cover} />
         <div className="ml-auto w-fit text-coco lg:mt-4">
           <TextReveal
             duration={1.5}
