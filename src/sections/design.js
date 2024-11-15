@@ -11,7 +11,7 @@ import trees from '@/img/trees.png';
 import chair from '@/img/chair.png';
 import { useLanguage } from '@/context/LanguageContext';
 import Video from '@/components/video';
-import cover from '@/img/video-cover-2.png';
+import cover from '@/img/video-cover.png';
 
 
 export default function Design() {
@@ -68,7 +68,7 @@ export default function Design() {
       </motion.div>
       <Heading className="lg:mt-24">{translations.design.video_title}</Heading>
       <div className="mx-auto lg:max-w-[80%]">
-        <Video videoId='1024899193' cover={cover}/>
+        <Video videoId='967169595' cover={cover}/>
       </div>
     </section>
   );
