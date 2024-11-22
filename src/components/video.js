@@ -8,26 +8,34 @@ import MotionTag from './animations/motionTag';
 import { useLanguage } from '@/context/LanguageContext';
 import playBtn from '@/svg/play.svg';
 
-export default function Video({ videoId, cover }) {
+export default function Video({ videoId, cover, autoplay = false }) {
   const { language } = useLanguage();
   const ref = useRef(null);
   const [player, setPlayer] = useState(null);
   const [started, setStarted] = useState(false);
 
+  function playVideo(playerObject) {
+    playerObject.enableTextTrack(language === 'pt' ? 'pt-BR' : 'en');
+    playerObject.play();
+    setStarted(true);
+  }
+
   useEffect(() => {
-    setPlayer(
-      new Player(ref.current, {
-        id: videoId,
-        responsive: true,
-        portrait: false,
-        title: false,
-        byline: false,
-        color: '744441',
-        autopause: true,
-        pip: true,
-        playsinline: false,
-      }),
-    );
+    const playerObject = new Player(ref.current, {
+      id: videoId,
+      responsive: true,
+      portrait: false,
+      title: false,
+      byline: false,
+      color: '744441',
+      autopause: true,
+      pip: true,
+      playsinline: false,
+    });
+
+    if (autoplay) setTimeout(() => playVideo(playerObject), 1000);
+
+    setPlayer(playerObject);
   }, []);
 
   return (
@@ -39,11 +47,7 @@ export default function Video({ videoId, cover }) {
             initial={false}
             exit={{ opacity: 0 }}
             transition={{ duration: 1 }}
-            onClick={() => {
-              player.enableTextTrack(language === 'pt' ? 'pt-BR' : 'en');
-              player.play();
-              setStarted(true);
-            }}
+            onClick={() => playVideo(player)}
             className="absolute z-10 h-full w-full cursor-pointer overflow-hidden bg-sand"
           >
             <MotionTag

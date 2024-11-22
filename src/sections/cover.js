@@ -1,16 +1,16 @@
+import { motion } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
-import { motion } from 'framer-motion';
 
 import TextReveal from '@/components/animations/textReveal';
 
-import downArrow from '@/svg/arrow-down.svg';
-import { useState } from 'react';
 import LineByLine from '@/components/animations/lineByLine';
 import { useLanguage } from '@/context/LanguageContext';
+import downArrow from '@/svg/arrow-down.svg';
+import { useState } from 'react';
 
 // TODO: orchestrate animation staggering through parent component
-export default function Cover() {
+export default function Cover({ onButtonClick }) {
   const { translations } = useLanguage();
   const [imgLoaded, setImgLoaded] = useState(true);
 
@@ -47,7 +47,7 @@ export default function Cover() {
             </TextReveal>
             <motion.a
               key={translations.cover.button}
-              href="#contato"
+              onClick={() => onButtonClick()}
               initial={{ scale: 0 }}
               animate={{ scale: 1 }}
               transition={{ delay: 2.5, duration: 0.5, ease: 'backOut' }}
