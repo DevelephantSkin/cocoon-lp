@@ -1,22 +1,23 @@
 import Image from 'next/image';
 
-import Heading from '@/components/heading';
-import StackedImages from '@/components/stackedImages';
-import SideImages from '@/components/sideImages';
-import OverflowCarousel from '@/components/overflowCarousel';
-import Article from '@/components/article';
-import ReefStamp from '@/components/animations/reefStamp';
-import Video from '@/components/video';
-import TextReveal from '@/components/animations/textReveal';
 import FadeTo from '@/components/animations/fadeTo';
+import ReefStamp from '@/components/animations/reefStamp';
+import TextReveal from '@/components/animations/textReveal';
+import Article from '@/components/article';
+import Heading from '@/components/heading';
+import OverflowCarousel from '@/components/overflowCarousel';
+import SideImages from '@/components/sideImages';
+import StackedImages from '@/components/stackedImages';
+import Video from '@/components/video';
 
-import boats from '@/img/boats.png';
-import sandSurf from '@/img/sand-surf.png';
-import boats2 from '@/img/boats-2.png';
-import jeep from '@/img/jeep.png';
-import biosphereBrand from '@/svg/brand-biosphere.svg';
 import { useLanguage } from '@/context/LanguageContext';
+import boats2 from '@/img/boats-2.png';
+import boats from '@/img/boats.png';
+import jeep from '@/img/jeep.png';
+import sandSurf from '@/img/sand-surf.png';
 import cover from '@/img/video-cover.png';
+import biosphereBrand from '@/svg/brand-biosphere.svg';
+import { motion } from 'framer-motion';
 
 export default function Milagres() {
   const { translations } = useLanguage();
@@ -53,6 +54,16 @@ export default function Milagres() {
             className="ml-auto max-w-md"
           >
             {translations.milagres.description}
+          <motion.a
+              key={translations.cover.button}
+              href='#contato'
+              initial={{ scale: 0 }}
+              animate={{ scale: 1 }}
+              transition={{ delay: 1, duration: 0.5, ease: 'backOut' }}
+              className="block w-52 border-cacao border py-4 text-center font-bold transition-colors duration-300 cursor-pointer mt-6 -mb-6"
+            >
+              {translations.contato.button}
+            </motion.a>
           </Article>
           <ReefStamp
             key={translations.milagres.animated_image_description}
