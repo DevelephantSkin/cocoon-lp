@@ -6,7 +6,6 @@ import MotionTag from './animations/motionTag';
 
 import logo from '@/svg/logo.svg';
 import brandText from '@/svg/brand-text.svg';
-import housi from '@/svg/brand-housi.svg';
 import SectionLinks from './sectionLinks';
 import SocialLinks from './socialLinks';
 import brazilIcon from '@/svg/brazil.svg';
@@ -72,13 +71,6 @@ function Desktop() {
               />
             </button>
           </div>
-          <MotionTag
-            tag={Image}
-            src={housi}
-            alt=""
-            className={'filter-cacao mr-px h-2 w-fit'}
-            {...FADE_IN_PROPS}
-          />
         </div>
         <motion.hr
           animate={{ width: '100%' }}

@@ -4,7 +4,6 @@ import { Fade as Hamburger } from 'hamburger-react';
 import { AnimatePresence, motion } from 'framer-motion';
 
 import SocialLinks from './socialLinks';
-import housiBrand from '@/svg/brand-housi.svg';
 
 import brand from '@/svg/brand.svg';
 import SectionLinks from './sectionLinks';
@@ -54,11 +53,6 @@ export default function MenuMobile() {
               <SectionLinks
                 onClick={() => setOpen(false)}
                 className="space-y-6 text-right text-2xl font-bold uppercase tracking-wide"
-              />
-              <Image
-                src={housiBrand}
-                alt="marca HOUSI"
-                className="ml-auto mr-1.5 mt-12 h-3 w-auto"
               />
             </div>
             <div className="flex items-end justify-between">

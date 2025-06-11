@@ -8,7 +8,6 @@ import sideView from '@/img/side-view.jpg';
 // import aerialView from '@/img/aerial-view.jpg';
 // import aerialViewHigh from '@/img/aerial-view-high.jpg';
 import reef from '@/img/reef.png';
-import housiDark from '@/svg/brand-housi-dark.svg';
 import OverlappingImages from '@/components/overlappingImages';
 import LineByLine from '@/components/animations/lineByLine';
 import FadeTo from '@/components/animations/fadeTo';
@@ -72,15 +71,6 @@ export default function Facilidades() {
           </motion.li>
         </motion.ul>
         <div className="cell-a2 mt-16 flex-col justify-between lg:mt-0 lg:flex">
-          <p className="text-sm text-sand-600 lg:text-xl">
-            POWERED BY
-            <Image
-              src={housiDark}
-              alt="HOUSI"
-              height={12}
-              className="-mt-1 ml-1 inline lg:ml-3 lg:inline-block lg:w-48"
-            />
-          </p>
           <LineByLine
             tag="h3"
             lines={[
@@ -110,7 +100,7 @@ export default function Facilidades() {
         </div>
       </div>
       <h3 className="mt-12 text-center text-xl lg:mt-24">
-        {translations.services.title} <strong>HOUSI</strong>
+        {translations.services.title}
       </h3>
       <CondoServices />
     </section>

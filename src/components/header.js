@@ -1,19 +1,17 @@
+import { motion } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
-import { useEffect, useState, useCallback } from 'react';
-import { motion } from 'framer-motion';
+import { useCallback, useEffect, useState } from 'react';
 
 import MenuMobile from './menuMobile';
-import MotionTag from './animations/motionTag';
 
-import logo from '@/svg/logo.svg';
+import { useLanguage } from '@/context/LanguageContext';
 import brandText from '@/svg/brand-text.svg';
-import housi from '@/svg/brand-housi.svg';
+import brazilIcon from '@/svg/brazil.svg';
+import logo from '@/svg/logo.svg';
+import UnitedStatesIcon from '@/svg/united_states.svg';
 import SectionLinks from './sectionLinks';
 import SocialLinks from './socialLinks';
-import brazilIcon from '@/svg/brazil.svg';
-import UnitedStatesIcon from '@/svg/united_states.svg';
-import { useLanguage } from '@/context/LanguageContext';
 
 const FADE_IN_PROPS = {
   initial: { opacity: 0 },
@@ -134,13 +132,6 @@ function Desktop({ hasBg }) {
               />
             </button>
           </div>
-          <MotionTag
-            tag={Image}
-            src={housi}
-            alt=""
-            className={'mr-px h-2 w-fit ' + (hasBg ? 'filter-cacao' : '')}
-            {...FADE_IN_PROPS}
-          />
         </div>
         <motion.hr
           animate={{ width: '100%' }}
