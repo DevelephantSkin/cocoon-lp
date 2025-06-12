@@ -83,19 +83,9 @@ export default function Facilidades() {
             className="mt-6 text-xl uppercase lg:mt-0 lg:text-5xl"
           ></LineByLine>
         </div>
-        <div className="cell-b2 mt-12 lg:mt-0">
+        <div className="cell-b2 mt-12 lg:mt-0 flex items-center">
           <FadeTo className="text-wrap">
             {translations.housi.description}
-          </FadeTo>
-          <FadeTo
-            tag="ul"
-            direction="bottom right"
-            className="mx-auto mt-8 w-fit space-y-4 text-lg *:before:font-bold *:before:content-['+_'] lg:ml-0 lg:mt-12"
-          >
-            <li>{translations.housi.buildings}</li>
-            <li>{translations.housi.cities}</li>
-            <li>{translations.housi.brands}</li>
-            <li>{translations.housi.partners}</li>
           </FadeTo>
         </div>
       </div>
