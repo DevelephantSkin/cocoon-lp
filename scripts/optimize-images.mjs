@@ -1,13 +1,13 @@
 import sharp from 'sharp';
-import { readdir, stat } from 'fs/promises';
+import { readdir, stat, rename, unlink, readFile, writeFile } from 'fs/promises';
 import { join, extname, relative, dirname } from 'path';
 import { fileURLToPath } from 'url';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const IMG_DIR = join(__dirname, '..', 'src', 'img');
 const MAX_WIDTH = 1920;
-const QUALITY = 80;
-const EXTENSIONS = new Set(['.jpg', '.jpeg', '.png']);
+const QUALITY = 75;
+const EXTENSIONS = new Set(['.jpg', '.jpeg', '.png', '.webp']);
 
 async function getFiles(dir) {
   const entries = await readdir(dir, { withFileTypes: true });
@@ -25,25 +25,29 @@ async function getFiles(dir) {
 
 async function optimizeImage(filePath) {
   const rel = relative(IMG_DIR, filePath);
-  const outPath = filePath.replace(/\.(jpg|jpeg|png)$/i, '.webp');
+  const outPath = filePath.replace(/\.(jpg|jpeg|png|webp)$/i, '.webp');
+  const tmpPath = outPath + '.tmp';
 
   try {
-    const metadata = await sharp(filePath).metadata();
-    let pipeline = sharp(filePath);
+    const buffer = await readFile(filePath);
+    const metadata = await sharp(buffer).metadata();
+    let pipeline = sharp(buffer);
 
     if (metadata.width > MAX_WIDTH) {
       pipeline = pipeline.resize(MAX_WIDTH);
     }
 
-    pipeline = pipeline.webp({ quality: QUALITY });
+    const result = await pipeline.webp({ quality: QUALITY }).toBuffer();
+    const origSize = buffer.length;
 
-    await pipeline.toFile(outPath);
+    await writeFile(outPath, result);
+    if (tmpPath !== outPath) await unlink(tmpPath).catch(() => {});
 
-    const [origStat, newStat] = await Promise.all([stat(filePath), stat(outPath)]);
-    const saved = ((1 - newStat.size / origStat.size) * 100).toFixed(1);
+    const newSize = result.length;
+    const saved = ((1 - newSize / origSize) * 100).toFixed(1);
 
     console.log(
-      `✓ ${rel} → .webp | ${(origStat.size / 1024 / 1024).toFixed(1)}MB → ${(newStat.size / 1024 / 1024).toFixed(1)}MB (${saved}% smaller)`
+      `✓ ${rel} → .webp | ${(origSize / 1024).toFixed(0)}KB → ${(newSize / 1024).toFixed(0)}KB (${saved}% smaller)`
     );
   } catch (err) {
     console.error(`✗ ${rel}: ${err.message}`);

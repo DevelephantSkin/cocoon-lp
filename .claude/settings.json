@@ -1,0 +1,7 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(find \"c:/Users/mmsme/Documents/Elephant Skin/cocoon-lp/src/img\" -name \"*.tmp\" -delete)"
+    ]
+  }
+}
