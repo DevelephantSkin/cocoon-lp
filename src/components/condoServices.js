@@ -4,13 +4,13 @@ import { motion } from 'framer-motion';
 import MotionTag from './animations/motionTag';
 import TextReveal from './animations/textReveal';
 
-import bed from '@/img/services/bed.jpg';
-import keys from '@/img/services/keys.jpg';
-import livingRoom from '@/img/services/living-room.jpg';
-import maid from '@/img/services/maid.jpg';
-import phone from '@/img/services/phone.jpg';
-import vendingMachine from '@/img/services/vending-machine.jpg';
-import washers from '@/img/services/washers.jpg';
+import bed from '@/img/services/bed.webp';
+import keys from '@/img/services/keys.webp';
+import livingRoom from '@/img/services/living-room.webp';
+import maid from '@/img/services/maid.webp';
+import phone from '@/img/services/phone.webp';
+import vendingMachine from '@/img/services/vending-machine.webp';
+import washers from '@/img/services/washers.webp';
 import { useLanguage } from '@/context/LanguageContext';
 
 function service(image, title) {

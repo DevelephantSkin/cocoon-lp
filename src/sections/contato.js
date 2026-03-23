@@ -3,8 +3,8 @@ import Form from '@/components/form';
 import SideImages from '@/components/sideImages';
 import { useLanguage } from '@/context/LanguageContext';
 
-import detail1 from '@/img/detail-1.png';
-import detail2 from '@/img/detail-2.png';
+import detail1 from '@/img/detail-1.webp';
+import detail2 from '@/img/detail-2.webp';
 
 export default function Contato() {
   const { translations } = useLanguage();

@@ -5,7 +5,7 @@ import Heading from '@/components/heading';
 import MotionTag from '@/components/animations/motionTag';
 import TextReveal from '@/components/animations/textReveal';
 
-import map from '@/img/map.png';
+import map from '@/img/map.webp';
 import { useLanguage } from '@/context/LanguageContext';
 
 export default function Implantacao() {

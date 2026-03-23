@@ -6,12 +6,12 @@ import Article from '@/components/article';
 import FadeTo from '@/components/animations/fadeTo';
 import MotionTag from '@/components/animations/motionTag';
 
-import sofa from '@/img/sofa.png';
-import trees from '@/img/trees.png';
-import chair from '@/img/chair.png';
+import sofa from '@/img/sofa.webp';
+import trees from '@/img/trees.webp';
+import chair from '@/img/chair.webp';
 import { useLanguage } from '@/context/LanguageContext';
 import Video from '@/components/video';
-import cover from '@/img/video-cover-2.png';
+import cover from '@/img/video-cover-2.webp';
 
 
 export default function Design() {

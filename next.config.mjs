@@ -3,7 +3,7 @@ import withNextPluginPreval from './prevalWrapper.cjs';
 
 const nextConfig = {
   images: {
-    deviceSizes: [640, 1920],
+    unoptimized: true,
   },
 };
 

@@ -7,13 +7,13 @@ import SlideNav from './slideNav';
 import 'swiper/css';
 import 'swiper/css/effect-fade';
 
-import bedroom1 from '@/img/units/1-bedroom.jpg';
-import livingRoom1 from '@/img/units/1-living-room.jpg';
-import bedroom1_2 from '@/img/units/1_2-bedroom.jpg';
-import porch2 from '@/img/units/2-porch.jpg';
-import livingRoom3 from '@/img/units/3-living-room.jpg';
-import livingRoom4 from '@/img/units/4-living-room.jpg';
-import porch5 from '@/img/units/5-porch.jpg';
+import bedroom1 from '@/img/units/1-bedroom.webp';
+import livingRoom1 from '@/img/units/1-living-room.webp';
+import bedroom1_2 from '@/img/units/1_2-bedroom.webp';
+import porch2 from '@/img/units/2-porch.webp';
+import livingRoom3 from '@/img/units/3-living-room.webp';
+import livingRoom4 from '@/img/units/4-living-room.webp';
+import porch5 from '@/img/units/5-porch.webp';
 import { useLanguage } from '@/context/LanguageContext';
 
 export default function UnitSlider() {

@@ -10,17 +10,17 @@ import SlideNav from './slideNav';
 import 'swiper/css';
 import 'swiper/css/effect-fade';
 
-import shadySand from '@/img/shady-sand.png';
-import cinema from '@/img/features/cinema.jpg';
-import entrance from '@/img/features/entrance.jpg';
-import externalArea from '@/img/features/external-area.jpg';
-import gym from '@/img/features/gym.jpg';
-import indoorBistro from '@/img/features/indoor-bistro.jpg';
-import indoorFacade from '@/img/features/indoor-facade.jpg';
-import outdoorBistro from '@/img/features/outdoor-bistro.jpg';
-import pool from '@/img/features/pool.jpg';
-import sandCourt from '@/img/features/sand-court.jpg';
-import waterLounge from '@/img/features/water-lounge.jpg';
+import shadySand from '@/img/shady-sand.webp';
+import cinema from '@/img/features/cinema.webp';
+import entrance from '@/img/features/entrance.webp';
+import externalArea from '@/img/features/external-area.webp';
+import gym from '@/img/features/gym.webp';
+import indoorBistro from '@/img/features/indoor-bistro.webp';
+import indoorFacade from '@/img/features/indoor-facade.webp';
+import outdoorBistro from '@/img/features/outdoor-bistro.webp';
+import pool from '@/img/features/pool.webp';
+import sandCourt from '@/img/features/sand-court.webp';
+import waterLounge from '@/img/features/water-lounge.webp';
 import { useLanguage } from '@/context/LanguageContext';
 
 export default function IndexedCarousel() {

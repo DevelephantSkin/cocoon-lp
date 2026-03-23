@@ -1,6 +1,6 @@
 'use client';
 
-import cover from '@/img/video-cover-2.png';
+import cover from '@/img/video-cover-2.webp';
 import Video from '../components/video';
 import closeIcon from '@/svg/close.svg';
 import Image from 'next/image';

@@ -10,8 +10,8 @@ import SlideNav from './slideNav';
 
 import 'swiper/css';
 
-import church from '@/img/church.png';
-import shore from '@/img/shore.png';
+import church from '@/img/church.webp';
+import shore from '@/img/shore.webp';
 
 export default function OverflowCarousel() {
   return (

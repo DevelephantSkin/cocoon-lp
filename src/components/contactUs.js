@@ -1,5 +1,5 @@
 import Image from "next/image";
-import whatsapp from "@/img/whatsapp.png";
+import whatsapp from "@/img/whatsapp.webp";
 import { useLanguage } from "../context/LanguageContext";
 
 export default function ContactUs() {

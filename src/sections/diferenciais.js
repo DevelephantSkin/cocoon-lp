@@ -3,10 +3,10 @@ import Image from 'next/image';
 import FeaturePanels from '@/components/featurePanels';
 import MotionTag from '@/components/animations/motionTag';
 
-import sandSurf from '@/img/sand-surf.png';
-import gym from '@/img/features/gym.jpg';
-import cinema from '@/img/features/cinema.jpg';
-import dunySand from '@/img/duny-sand.png';
+import sandSurf from '@/img/sand-surf.webp';
+import gym from '@/img/features/gym.webp';
+import cinema from '@/img/features/cinema.webp';
+import dunySand from '@/img/duny-sand.webp';
 import brandDark from '@/svg/brand-dark.svg';
 import IndexedCarousel from '@/components/indexedCarousel';
 import { useLanguage } from '@/context/LanguageContext';

@@ -11,11 +11,11 @@ import StackedImages from '@/components/stackedImages';
 import Video from '@/components/video';
 
 import { useLanguage } from '@/context/LanguageContext';
-import boats2 from '@/img/boats-2.png';
-import boats from '@/img/boats.png';
-import jeep from '@/img/jeep.png';
-import sandSurf from '@/img/sand-surf.png';
-import cover from '@/img/video-cover.png';
+import boats2 from '@/img/boats-2.webp';
+import boats from '@/img/boats.webp';
+import jeep from '@/img/jeep.webp';
+import sandSurf from '@/img/sand-surf.webp';
+import cover from '@/img/video-cover.webp';
 import biosphereBrand from '@/svg/brand-biosphere.svg';
 import { motion } from 'framer-motion';
 

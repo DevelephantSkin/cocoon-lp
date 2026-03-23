@@ -4,10 +4,10 @@ import { motion } from 'framer-motion';
 import Heading from '@/components/heading';
 import CondoServices from '@/components/condoServices';
 
-import sideView from '@/img/side-view.jpg';
-// import aerialView from '@/img/aerial-view.jpg';
-// import aerialViewHigh from '@/img/aerial-view-high.jpg';
-import reef from '@/img/reef.png';
+import sideView from '@/img/side-view.webp';
+// import aerialView from '@/img/aerial-view.webp';
+// import aerialViewHigh from '@/img/aerial-view-high.webp';
+import reef from '@/img/reef.webp';
 import OverlappingImages from '@/components/overlappingImages';
 import LineByLine from '@/components/animations/lineByLine';
 import FadeTo from '@/components/animations/fadeTo';
